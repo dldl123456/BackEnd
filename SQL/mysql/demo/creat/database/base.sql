@@ -1,0 +1,6 @@
+USE demo;
+
+CREATE TABLE t1(
+    id INT NOT NULL,
+    NAME CHAR(20)
+);
