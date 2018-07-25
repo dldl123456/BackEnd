@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>WebTest02</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <!-- loginServlet-->
+ <!--  <servlet>
+  	<servlet-name>loginServlet</servlet-name>
+  	<servlet-class>com.itzzb.servlet.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>loginServlet</servlet-name>
+  	<url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping> -->
+  
+  <!-- <servlet>
+  	<servlet-name>successServlet</servlet-name>
+  	<servlet-class>com.itzzb.servlet.SuccessServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>successServlet</servlet-name>
+  	<url-pattern>/successServlet</url-pattern>
+  </servlet-mapping> -->
+  <!--delSessionServlet-->
+  <!-- <servlet>
+  	<servlet-name>delSessionServlet</servlet-name>
+  	<servlet-class>com.itzzb.servlet.DelSessionServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>delSessionServlet</servlet-name>
+  	<url-pattern>/delSessionServlet</url-pattern>
+  </servlet-mapping> -->
+  
+  
+  
+  <!--监听器配置-->
+  
+ <!--  <listener>
+  	<listener-class>com.itzzb.listener.MySessionListener</listener-class>	
+  </listener> -->
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>

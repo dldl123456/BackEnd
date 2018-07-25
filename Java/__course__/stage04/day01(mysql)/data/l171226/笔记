@@ -1,0 +1,93 @@
+笔记
+
+
+数据库：
+存放数据的仓库。
+
+表  
+行：一条记录
+列：属性字段
+
+使用mysql数据库：
+1.开启mysql服务，(通过控制面板服务开启，通过mysqld.exe启动)
+2.登录mysql:  mysql -h localhost -u root -p 
+
+常用命令：
+查看有哪些数据库： show databases;  //分号不能忘，代表结束
+创建数据库： create database student;
+删除数据库：drop database student;
+使用某个数据库：use student;
+查看所有的表：show tables;
+查看表结构：desc stu;
+
+创建学生表：
+ create table stu(
+     id int primary key auto_increment, //主键(唯一和非空)，自增长
+     name varchar(50) not null,  //列与列直接用逗号分隔，
+     sex char(2) not null,
+     age int   //最后一列没有逗号 
+     );  
+
+添加数据：
+insert into 表名 values(值)
+
+insert into stu /*(name,sex,age)*/
+values (7,'lisi','男',25); //列和值数量顺序要匹配， 
+自增长默认从1开始，如果手动插入，会根据表里面最大的id值进行增长。
+
+修改数据：****where条件不能忘
+update stu set name = 'zhangsan' where id = 2 ;
+
+删除数据：****where条件不能忘
+delete from stu where id = 6 ;
+
+清除整张表数据：
+delete from stu;//后面不跟条件删除整张表数据，但是自增长还是保持之前的，
+TRUNCATE table stu ;//恢复到创建表最初状态。 后面不能加where条件。只能全删
+
+表设计原则：
+一张表只描述一件事情
+字段分到不能再分，
+避免传递依赖，（比如出生日期  和  年龄）
+避免重复和冗余，
+
+开发项目的步骤：
+1.需求分析，
+2.概要设计
+3.详细设计
+4.编码
+5.调试，上线，维护
+
+实体关系：
+一对一
+一对多
+多对多
+
+学生管理系统  表设计
+1.单纯的学生信息管理
+2.学生，课程，分数
+
+1 张三
+2 李四
+3 王五
+
+1 java
+2 sql
+3 h5
+
+成绩表
+1  1    1   90
+2  2	1   50
+3  2	2	99	
+4  1    2	88
+
+
+
+
+
+
+
+
+
+
+

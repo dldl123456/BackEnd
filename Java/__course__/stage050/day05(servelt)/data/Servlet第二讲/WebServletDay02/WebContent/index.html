@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="aServlet?uname=qwer&upass=123&sex=男">超链接传参数至后端servlet</a>
+	<form method="get" action="formServlet">
+		<p>
+			用户名:<input type="text" name="uname">
+		</p>
+		<p>
+			密码:<input type="password" name="upass">
+		</p>
+		<p>
+			性别:
+			<input type="radio" name="sex" value="男">男
+			<input type="radio" name="sex" value="女">女
+		</p>
+		<p>
+			爱好:
+			<input type="checkbox" name="hobby" value="玩游戏">玩游戏
+			<input type="checkbox" name="hobby" value="看视频">看视频
+			<input type="checkbox" name="hobby" value="写代码">写代码
+		</p>
+		<p>
+			所在城市:
+			<select name="city">
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="广州">广州</option>
+				<option value="深圳">深圳</option>
+			</select>
+		</p>
+		<input type="submit" value="提交数据">
+	</form>
+	<hr>
+	<form method="get" action="loginServlet">
+		<p>
+			用户名:<input type="text" name="uname">
+		</p>
+		<p>
+			密码:<input type="password" name="upass">
+		</p>
+		<input type="submit" value="提交数据">
+	</form>
+	
+	<a href="redirectServlet">
+		redirect测试
+	</a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

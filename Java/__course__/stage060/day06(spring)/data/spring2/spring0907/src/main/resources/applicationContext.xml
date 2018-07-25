@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop.xsd">
+            
+	<!-- spring框架就是一个容器（大箱子） -->
+	<!-- bean标签，就是指定放入容器内的class类 -->
+	<!-- 第一个bean配置 -->
+	<!-- singleton prototype -->
+	<!-- 默认不配置，spring的bean是单例的，scope="singleton" -->
+	<bean id="helloWorld" class="com.zhizuobiao.class1.HelloWorld"
+		scope="singleton" lazy-init="true" init-method="myInit"
+		destroy-method="myDestory"></bean>
+
+	<bean id="user" class="com.zhizuobiao.class1.User">
+		<!-- 对象的构造方法（对象要提供3个参数的构造方法，spring才能new User） -->
+		<constructor-arg name="id" value="1" />
+		<constructor-arg name="username" value="admin" />
+		<constructor-arg name="password" value="123456" />
+	</bean>
+
+
+	<bean id="user2" class="com.zhizuobiao.class1.User">
+		<!-- user set方法给属性赋值 -->
+		<property name="username" value="root"></property>
+		<property name="password" value="abcdefg"></property>
+		<property name="id" value="200"></property>
+	</bean>
+
+	<!-- 定义cat对象的bean -->
+	<bean id="cat" class="com.zhizuobiao.class1.Cat">
+		<property name="name" value="dalianmao"></property>
+		<property name="age" value="5"></property>
+	</bean>
+
+	<!-- 注入对象属性cat -->
+	<bean id="user3" class="com.zhizuobiao.class1.User">
+		<!-- ref=""，spring容器内对象的bean标签（类），写标签的id值 -->
+		<property name="cat" ref="cat"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="abcdefg"></property>
+		<property name="id" value="200"></property>
+	</bean>
+
+
+	<!-- #{user3.password} 【标签id，对象的属性（方法）】 -->
+	<bean id="user4" class="com.zhizuobiao.class1.User">
+		<!-- ref=""，spring容器内对象的bean标签（类），写标签的id值 -->
+		<property name="cat" ref="cat"></property>
+		<property name="username" value="james"></property>
+		<property name="password" value="#{user3.password}"></property>
+		<property name="id" value="300"></property>
+	</bean>
+
+
+
+	<!-- 集合 -->
+	<bean id="user5" class="com.zhizuobiao.class1.User">
+		<!-- ref=""，spring容器内对象的bean标签（类），写标签的id值 -->
+		<property name="cat" ref="cat"></property>
+		<property name="username" value="james"></property>
+		<property name="password" value="#{user3.password}"></property>
+		<property name="id" value="300"></property>
+
+		<property name="list">
+			<list>
+				<value>童童</value>
+				<value>小凤</value>
+			</list>
+		</property>
+
+
+		<!-- 注入map集合 -->
+		<property name="map">
+			<map>
+				<entry key="email" value="111" />
+				<entry key="qq" value="333" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- spring开启注解 -->
+	<context:annotation-config />
+	<!-- 自动扫描注解 -->
+	<!-- 扫描工程里面的类，使用注解，spring会自动解析，并加载到容器中 -->
+	<context:component-scan base-package="com.zhizuobiao" />
+	
+	
+	
+	
+	   <!-- 定义通知类 -->
+    <bean id="logInfo" class="com.zhizuobiao.class2.LogInfo"></bean>
+
+    <aop:config>
+        <!-- 定义切面 -->
+        <aop:aspect ref="logInfo" id="logInfoAspect">
+            <!-- 定义切入点 -->
+            <aop:pointcut id="mycut" expression="execution(* com.zhizuobiao..OrderDao.*(..))"></aop:pointcut>
+
+            <!-- 后置通知 -->
+            <!--<aop:after method="after" pointcut-ref="mycut"></aop:after>-->
+
+            <!-- 前置通知 -->
+            <aop:before method="before" pointcut-ref="mycut"></aop:before>
+
+            <!--<aop:around method="around" pointcut-ref="mycut"></aop:around>-->
+
+            <!--<aop:after-throwing method="throwing" pointcut-ref="mycut" throwing="e"></aop:after-throwing>-->
+            
+            <!--<aop:after-returning method="returning" pointcut-ref="mycut" returning="value" ></aop:after-returning>-->
+
+        </aop:aspect>
+    </aop:config>
+	
+	
+	
+	
+	
+	
+	
+</beans>

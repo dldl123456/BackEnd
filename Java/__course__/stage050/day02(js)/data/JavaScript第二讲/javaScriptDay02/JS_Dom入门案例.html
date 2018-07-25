@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .class1{
+            color:red;
+        }
+    </style>
+    <script type="text/javascript">
+        //当html元素全部加在完毕之后自动调用此方法
+        window.onload=function(){
+            //通过id获取html元素对应的dom对象
+            var p1=document.getElementById("p1");
+            //获取元素对应的文本节点
+            //alert(p1.innerHTML);
+            p1.innerHTML="我不是学不会就是太懒了!!!";
+            p1.className="class1";
+            //创建一个完整a标签然后添加至div中
+            //等价于创建了<a></a> 元素节点
+            var myA=document.createElement("a");
+            //<a>动态生成文本节点</a>
+            myA.innerHTML="动态生成文本节点";
+            //添加属性<a href="#">动态生成文本节点</a>
+            myA.href="#";
+            //将myA添加至div中
+            var div=document.getElementById("show");
+            //将myA添加至div中
+            div.appendChild(myA);
+        }
+    </script>
+</head>
+<body>
+    <p id="p1">大家好，欢迎来到2017</p>
+    <div id="show">
+
+    </div>
+</body>
+</html>

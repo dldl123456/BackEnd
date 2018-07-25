@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- spring框架就是一个容器（大箱子） -->
+	<!-- bean标签，就是指定放入容器内的class类 -->
+	<!-- 第一个bean配置 -->
+	<!-- singleton prototype -->
+	<!-- 默认不配置，spring的bean是单例的，scope="singleton" -->
+	<bean id="helloWorld" class="com.zhizuobiao.class1.HelloWorld"
+		scope="singleton" lazy-init="true" init-method="myInit"
+		destroy-method="myDestory"></bean>
+
+
+</beans>

@@ -1,0 +1,77 @@
+笔记：
+
+学生，课程，分数
+
+学生：
+ID Name
+1  张三
+2  李四
+3  王五
+
+科目：
+ID Name
+1  java
+2  sql
+3  h5
+
+成绩表
+ID 学生Id 科目Id 成绩
+1	1    1     90
+2	2	 1     50
+3	2	 2	   99	
+4	1    2	   88
+
+
+--隐式内连接
+select st.name as '姓名' ,sex,su.name '科目',score 
+from student st,subject su,score sc 
+where st.id = sc.student_id 
+and su.id = sc.subject_id 
+
+--显示内连接
+select st.name as '姓名' ,sex,su.name '科目',score 
+from score sc
+INNER JOIN subject su ON su.id = sc.subject_id  
+INNER JOIN student st ON st.id = sc.student_id;
+
+
+
+别名：  as  也可以不写 直接空格分隔
+模糊查询： like 和  %  _ 
+select * 
+from student 
+where name like 'zhang%'
+排序： order by   desc/asc
+select * 
+from student
+order by id asc;
+查询总条数：count(*)
+SELECT COUNT(*) from student;
+总分：sum()
+平均分：avg()
+分组查询：group by 列名;---- having  
+SELECT sex,COUNT(*)
+from student
+group by sex;
+查询指定条数：
+select * 
+from student
+LIMIT 1,2; //从第2条开始查，查2条
+
+
+jdbc(java数据库连接)
+1.导入mysql驱动
+2.build path 添加驱动到项目中
+
+
+
+PreparedStatement 预编译，用占位符
+
+三层架构
+
+
+
+
+
+
+

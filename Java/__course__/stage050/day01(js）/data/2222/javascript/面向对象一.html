@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 对象包括属性与方法/函数
+			 */
+			var Person=new Object();   //自定义对象
+			Person.name='容儿';
+			Person.age=22;
+			Person.eat=function(){
+				alert(this.name+" 吃东东");
+			}
+			
+			alert(Person.name);
+			Person.eat();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

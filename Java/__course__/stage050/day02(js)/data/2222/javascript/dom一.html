@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/**DOM操作W3C的常用方法操作DOM元素
+			 * Dom操作：元素节点
+			 *        属性节点
+			 *        文本节点
+			 * Dom操作的 查找元素
+			 */
+			//1.getElementById()
+			//window.onload事件表示dom加载完毕就绪.
+			window.onload=function(){
+			   
+			   var div=document.getElementById('box'); //获取div元素
+			 //  alert(div.tagName+"****");   //获取div元素的标签名
+			 //  alert(div.innerHTML);   //div元素的内容;
+			 
+			 /*
+			 var divs=document.getElementsByTagName('div');  //返回数组;
+			 alert(divs.length);
+			 for(var i=0;i<divs.length;i++){
+			 	alert(divs[i].innerHTML);
+			 }
+			 */
+			/*
+			var texts=document.getElementsByName('user');
+			 alert(texts.length);
+			  for(var i=0;i<texts.length;i++){
+			 	alert(texts[i].value);
+			 	alert(texts[i].maxLength);
+			 }
+			*/
+			/**
+			 * 属性操作
+			 */
+			
+			var box=document.getElementById('box');  //box div对象
+			// box.setAttribute('id','mydiv');
+			 //box.removeAttribute('id');
+			 //alert(box.getAttribute('id'));
+			 
+			 //操作样式CSS
+			box.style.backgroundColor='red';
+			box.style.color='blue';
+			
+			//*  获取所有的元素
+			var all=document.getElementsByTagName('*');   /*   通配符，代表获取所有的元素;*/
+			 for(var i=0;i<all.length;i++){
+			 	alert(all[i].tagName);
+			 }
+			
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="box">mydiv1</div>
+		<div id="box1">mydiv2</div>
+		
+		<input type="text" name="user" value="容儿" maxlength="10"/>
+		<input type="text" name="user" value="小花" maxlength="20"/>
+		
+	</body>
+</html>

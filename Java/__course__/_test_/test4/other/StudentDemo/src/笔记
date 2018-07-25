@@ -1,0 +1,31 @@
+MVC:
+Model(模型)：功能性代码，处理业务逻辑，(Model与数据库打交道)
+View(视图) ：显示数据，给用户看的。
+Controller(控制器) ：处理用户请求。
+
+
+ * 没有说一定要按照这种顺序去写代码 (推荐写法)
+ * 1:先写底层: 接口层-- 对数据的一些增删改查的一些方法
+ * 2:view--  view层里面需要什么,  
+ * 3:control
+ * 重点:在写代码之前必须必须要把数据库字段设计好
+ * 
+ * 
+ * 1,com.iotek.db   DbHelp -- 链接数据库
+ * 2,com.iotek.dao  -- 底层操作数据库接口
+ * 3,com.iotek.dao.impl -- 底层操作数据库实现类
+ * 4,com.iotek.view -- 用户看到的内容--
+ * 6,com.iotek.service(biz)--业务逻辑处理接口--
+ * 7,com.iotek.service.impl -- 业务逻辑处理接口实现类
+ * 8,com.iotek.entity --实体类
+ * 9,com.iotek.test   --测试类
+ * 10,com.iotek.util  --工具类(日期/时间处理，)
+ */
+
+
+ * 数据库和Java代码的链接
+ *  1,MySQL的jar包在src目录下，如果eclipse看不到，可以去目录下面看 
+ *  2,build path -->add to build path
+ *  3,sql文件也在src文件夹下
+
+

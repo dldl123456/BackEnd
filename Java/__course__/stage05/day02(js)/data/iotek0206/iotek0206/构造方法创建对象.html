@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			   构造方法 :解决对象创建代码重复的问题，也解决了对象的识别问题，....
+			 * */
+			
+			function Student(name,age){
+				this.name=name;
+				this.age=age;
+				/*
+				this.eat=function(){
+					alert(this.name+"吃东东");
+				}
+				*/
+				this.eat=eat;             //alert(stu1.eat==stu2.eat   true);
+			}
+			
+			function eat(){
+				alert("吃东东");
+			}
+			
+			var stu1=new Student('容儿',22);
+			//alert(stu1.name);
+		//	stu1.eat();
+			var stu2=new Student('容儿',22);
+			//alert(stu2.name);
+			
+			//alert(stu1 instanceof Student);  //识别对象
+			
+			//alert(this);   //全局对象 window
+			
+			//测试对象的属性与方法
+			
+			alert(stu1.constructor);
+			alert(stu1===stu2);  //false
+			
+			alert(stu1.name==stu2.name); //属性值是相等
+			
+			alert(stu1.eat==stu2.eat);  //false;函数的引用是不同的，
+			
+			alert(stu1.eat()==stu2.eat());  //true;
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

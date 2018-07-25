@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 构造方法/构造函数
+			 * @param {Object} name
+			 * @param {Object} age
+			 */
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+				this.eat=function(){
+					alert(this.name+"吃东东");
+				}
+				
+			}
+		    
+			var p1=new Person('容儿',22);  //new 关键字
+			alert(p1.name);
+			p1.eat();
+			
+			var p2=new Person('德华',33);
+			alert(p2.name);
+			
+			
+			//对象识别的问题
+			alert(p1 instanceof Object);   //true
+			alert(p1 instanceof Person);   //true 对象识别
+			
+			alert(this);    //this作用域在全局对象   window对象
+			window.alert(this===window);   //对象相等.
+			
+			
+			
+			var p3=new Person('小花',22);  //new 关键字
+		
+			
+			var p4=new Person('小花',22);
+			alert(p3.name==p4.name);
+			alert(p3.eat==p4.eat);  //比较的是引用，地址 false
+			alert(p3.eat()==p3.eat()); //true
+			
+			
+			
+			//对象冒充调用
+			var o=new Object();
+			Person.call(o,'小白',25);
+			o.eat();
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

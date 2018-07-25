@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user id="1" uname="zs1" upass="123" address="上海市黄浦区"/>
+	<user id="2" uname="zs2" upass="123" address="上海市黄浦区"/>
+	<user id="3" uname="zs3" upass="123" address="上海市黄浦区"/>
+	<user id="4" uname="zs4" upass="123" address="上海市黄浦区"/>
+	<user id="5" uname="zs5" upass="123" address="上海市黄浦区"/>
+</users>

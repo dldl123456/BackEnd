@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="script/jquery-2.1.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#add").click(function(){
+                //创建一个元素节点
+                var p1=$("<p></p>");
+                //创建一个元素节点以及文本节点
+                var p2=$("<p>2大节点创建完成</p>");
+                //创建一个拥有三大节点的标签
+                var p3=$("<p id='p3'>3大节点创建完成</p>");
+                //将3大节点添加至div中
+                $("#show").append(p1);
+                $("#show").append(p2);
+                $("#show").append(p3);
+            });
+            $("#del").click(function(){
+                var p3=$("#p3").remove();
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="add" value="创建节点">
+    <input type="button" id="del" value="删除节点">
+    <div id="show">
+
+    </div>
+
+</body>
+</html>

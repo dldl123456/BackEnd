@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var btn=document.getElementById('btn');
+				var ul=document.getElementById('myul');
+				
+				
+				btn.onclick=function(){
+				    var content=document.getElementById('content').value;
+					var uli=document.createElement('li'); //动态创建li节点;
+					uli.innerHTML=content;
+					ul.appendChild(uli);        //把li元素添加ul中
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="content"><br>
+			
+		<input type="button" value="动态创建li" id="btn">
+		<ul id="myul">
+			
+		</ul>
+	</body>
+</html>

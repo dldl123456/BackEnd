@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        //命名函数 ,传参数无需定义类型
+        function fun1(message,age){
+            alert(message);
+            alert(age)
+        }
+        //fun1("命名函数的调用",20);
+
+        //匿名函数
+        var fun=function(message){
+            alert(message);
+        }
+        //fun("匿名函数调用");
+        //有返回值的函数应用
+        function testFun1(num1,num2){
+            var res=num1+num2;
+            return res;
+        }
+        alert(testFun1(1,2));
+        //提示消息
+        function testFun2(message){
+            var res="异常";
+            if(message!=null&&message!=""){
+                res="用户名可以用!!!";
+            }else{
+                res="用户名为空!!!";
+            }
+            return res;
+        }
+        alert(testFun2("123"));
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

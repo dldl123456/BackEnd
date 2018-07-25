@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		  /**
+		   * 自动转换
+		   */
+			var a=200;
+			var str='abc';
+			alert(a+str);    //a转化成字符串与str连接
+			
+			var flag=true;   //true=1 ,false=0;
+			alert(flag+a);  //flag=1
+			
+			alert(flag+str); //trueabc
+			
+			/*
+			 * 强制类型转换
+			 */
+			alert(parseInt('7.33AA'));  //7
+			alert(parseFloat('7.3aa3')); //7.3
+			
+			//eval把字符串转换成表达式进行运算
+			
+			alert(eval('10>20?10:20'));  //20
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

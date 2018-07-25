@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			/*加载文档就绪 dom树*/
+			window.onload=function(){
+				//获取按钮btn元素
+				var btn=document.getElementById('btn');
+				//为按钮动态绑定一个单击事件
+				
+				btn.onclick=function(){
+					//alert('点我吧');
+					var chks=document.getElementsByName('loves');  //对象数组，数组元素是checkbox元素
+					for(var i=0;i<chks.length;i++){
+						chks[i].checked=true;
+					}
+					
+				}
+				
+				
+				
+				/* 
+				 * 操作image图像标签
+				 */
+				
+				var imgs=document.getElementsByTagName('img')
+				alert(imgs.length);
+				for(var i=0;i<imgs.length;i++){
+						imgs[i].src='img/222.jpg';
+					}
+				
+				
+			}
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="全选">
+		<input type="checkbox" name="loves" value="music">音乐
+		<input type="checkbox" name="loves" value="internate">网络
+		<input type="checkbox" name="loves" value="sports">运动
+		<img>
+		<img>
+	</body>
+</html>

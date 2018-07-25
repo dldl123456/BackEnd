@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <!-- 配置servlet -->
+  <!-- 注册servlet -->
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <!-- 给servlet 起名  3  -->
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>queryScore</servlet-name>
+    <!-- 请求发出后，真正处理的程序  4 -->
+    <servlet-class>com.sky.web.queryScore</servlet-class>
+  </servlet>
+
+  <!-- 映射  -->
+  <servlet-mapping>
+  	<!-- servlet的名字，要求和上面的那个名字要一致   2 -->
+    <servlet-name>queryScore</servlet-name>
+    <!-- 配置form表单中的action的那个url 1 -->
+    <url-pattern>/queryScore</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

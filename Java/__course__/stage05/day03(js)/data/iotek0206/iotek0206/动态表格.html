@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+			var table=document.getElementById('tb');
+			var btn=document.getElementById('bt');
+			var name=document.getElementById('name');
+			var age=document.getElementById('age');
+			var id=table.tBodies[0].rows.length+1; //tbody中的行数+1
+			btn.onclick=function(){
+				var tr=document.createElement('tr'); //创建节点行;
+				
+				var td=document.createElement('td');
+				td.innerHTML=id++;
+				tr.appendChild(td);
+				
+				var td=document.createElement('td');
+				td.innerHTML=name.value;
+				tr.appendChild(td);
+				
+				var td=document.createElement('td');
+				td.innerHTML=age.value;
+				tr.appendChild(td);
+				
+				var td=document.createElement('td');
+				td.innerHTML='<a href="javascript:;">删除</a>'
+				tr.appendChild(td);
+				
+				td.getElementsByTagName('a')[0].onclick=function(){
+					table.tBodies[0].removeChild(this.parentNode.parentNode);
+				}
+				
+				table.tBodies[0].appendChild(tr);
+				
+				
+				
+				
+				
+				
+			   }
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		姓名:<input type="text" id="name" />
+		年龄:<input type="text" id="age" />
+		<input type="button" id="bt" value="添加"/>
+		<table id="tb" border="1" width="500">
+		    <thead>
+		    	<td>id</td>
+		    	<td>姓名</td>
+		    	<td>年龄</td>
+		    	<td>删除</td>
+		    </thead>
+		    <tbody>
+		    	<tr>
+		        <td>1</td>
+		    	<td>容儿</td>
+		    	<td>22</td>
+		    	</tr>
+		    	<tr>
+		        <td>2</td>
+		    	<td>小花</td>
+		    	<td>21</td>
+		    	</tr>
+		    	<tr>
+		        <td>3</td>
+		    	<td>小白</td>
+		    	<td>20</td>
+		    	</tr>
+		    	<tr>
+		        <td>4</td>
+		    	<td>小林</td>
+		    	<td>23</td>
+		    	</tr>
+		    	<tr>
+		        <td>5</td>
+		    	<td>德华</td>
+		    	<td>24</td>
+		    	</tr>
+		    </tbody>
+			
+		</table>
+	</body>
+</html>

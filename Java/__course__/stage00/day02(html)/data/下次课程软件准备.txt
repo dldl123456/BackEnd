@@ -1,0 +1,35 @@
+java
+1.jdk 1.8 
+开发工具: 
+2.javaSE版的eclipse
+3.javaEE版的eclipse
+
+Web容器:
+4.Tomcat
+
+数据库:
+5.oracle： 服务  11g
+对应的可视化工具
+6.PLSQLDeveloper
+
+7.mysql： 服务 5.0以上即可
+8.SQLyog或者Navicat mysql
+
+
+前段开发工具:
+9.WebStrom8.0及其以上
+DreamWeaver
+
+
+
+
+
+
+
+
+
+
+
+
+
+

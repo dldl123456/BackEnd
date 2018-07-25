@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*类名 */
+			.left{
+				width:200px;
+				height:300px;
+				font-size:12px;
+				margin-top: 10px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+		   window.onload=function(){
+		   	  var btn=document.getElementById('btn'); //获取按钮元素对象
+		   	  //动态绑定对象的事件
+			  btn.onclick=function(){
+			  	 var select_left=document.getElementById('select_left');
+			  	 var select_right=document.getElementById('select_right');
+			  	 for(var i=0;i<select_left.length;i++){
+			  	 	if(select_left.options[i].selected==true){
+			  	 		var option=document.createElement('option'); //动态创建option元素节点
+			  	 		//完成option赋值
+			  	 		option.text=select_left.options[i].text;
+			  	 		option.value=select_left.options[i].value;
+			  	 		//绑定到select_right
+			  	 		select_right.add(option);
+			  	 		//左边要移除被移动的选项
+			  	 		select_left.removeChild(select_left.options[i]);
+			  	 		
+			  	 	}
+			  	 }
+			  }
+		   	
+		   }
+			 
+		</script>
+	</head>
+	<body>
+		
+		<select id="select_left" size="10" multiple class="left">
+			  <option value="容儿">容儿</option>
+			  <option value="祖儿">祖儿</option>
+			  <option value="德华">德华</option>
+			  <option value="美君">美君</option>
+			        
+			
+		</select>
+		<input type="button" value=">>>" id="btn">
+		<select id="select_right" size="10" multiple class="left">
+			
+			
+		</select>
+	</body>
+</html>

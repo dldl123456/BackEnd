@@ -1,0 +1,25 @@
+HTLM（一）
+区分标签是否要开始和结束：
+对一块内容进行描述的必定有开始和结束的标签
+在浏览器中有时会自动忽略空格/回车，需要一些特殊字符来表示一些特殊符号：&lt;小于 &gt;大于 &amp; &符号
+&quot; 双引号&apos;单引号&copy; 版权 &trade;商标 &nbsp;空格
+HTML格式：
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	</body>
+</html>
+b: 加粗
+strong: 加粗
+i:斜体
+em: 斜体
+u: 下划线
+s: 中划线(删除线)
+sup: 上标
+sub: 下标
+h1~h6
+ol ul dl-dt-dd
+img 图片
+a 超链接

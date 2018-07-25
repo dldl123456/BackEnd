@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function getTime(){
+           var nowTime=new Date();
+           var hour=nowTime.getHours();
+           var min=nowTime.getMinutes();
+           var sec=nowTime.getSeconds();
+           var time=hour+":"+min+":"+sec;
+           var div=document.getElementById("showTime");
+           div.innerHTML=time;
+        }
+        //每隔1000ms,自动调用getTime函数一次
+        var timer=window.setInterval("getTime()",1000);
+
+        function stop1(){
+            window.clearInterval(timer);
+        }
+    </script>
+</head>
+<body>
+    <div id="showTime">
+
+    </div>
+    <input type="button" value="暂停" onclick="stop1()">
+</body>
+</html>

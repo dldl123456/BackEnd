@@ -1,0 +1,21 @@
+td {
+	text-align: center;
+	color: red;
+}
+
+#blue {
+	color: blue
+}
+
+.green {
+	color: green
+}
+
+* {
+	color: yellow
+}
+
+p, span {
+	color: #CC00FF
+}
+/* 选择器 {属性名:属性值;} */

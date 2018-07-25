@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var table=document.getElementById('tb1');
+				var btn=document.getElementById('btn');
+				var name=document.getElementById('name');
+				var age=document.getElementById('age');
+				var id=table.tBodies[0].rows.length+1;  //获取表格tbody中的行数;
+				//alert(id+'***');
+				btn.onclick=function(){
+					
+					var tr=document.createElement('tr'); //动态创建tr行
+					var td=document.createElement('td'); //动态创建td单元格
+					td.innerHTML=id++;      //单元格赋值自增长
+					tr.appendChild(td);     //为行添加单元格
+					
+					var td=document.createElement('td'); //动态创建td单元格
+					td.innerHTML=name.value;      //单元格赋值姓名
+					tr.appendChild(td);     //为行添加单元格
+					
+					var td=document.createElement('td'); //动态创建td单元格
+					td.innerHTML=age.value;      //单元格赋值年龄
+					tr.appendChild(td);     //为行添加单元格
+					
+					var td=document.createElement('td'); //动态创建td单元格
+					td.innerHTML='<a href="javascript:;">删除</a>'
+					tr.appendChild(td);     //为行添加单元格
+					
+					//删除行
+					td.getElementsByTagName('a')[0].onclick=function(){
+						//this代表a
+						table.tBodies[0].removeChild(this.parentNode.parentNode);
+					}
+
+					table.tBodies[0].appendChild(tr);  //tr绑定到表格主体tbody中
+				}
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		姓名:<input type="text" id="name">
+		年龄:<input type="text" id="age">
+		<input type="button" value="添加" id="btn">
+		<table id="tb1" border="1" width="600">
+			<thead>
+				<td>id</td>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>操作</td>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>容儿</td>
+				    <td>22</td>
+				    <td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>祖儿</td>
+				    <td>22</td>
+				    <td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

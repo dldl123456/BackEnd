@@ -1,0 +1,29 @@
+
+
+interface Inter{
+	void show();
+}
+
+class Outer{
+	//补全代码
+
+}
+
+class OuterTest{
+	public static void main(String[] args){
+		Outer.method().show();
+	}
+}
+
+//在控制台输出“HelloWorld”
+
+
+
+计算两个日期之间相隔多少天？
+2017.8.8  2017.12.17  
+
+获取明天的这个时候。
+
+
+
+

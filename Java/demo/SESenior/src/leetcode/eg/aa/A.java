@@ -1,0 +1,9 @@
+/*
+ *  LeetCodeÊ¾Àý
+ */
+
+package leetcode.eg.aa;
+
+public class A {
+
+}

@@ -1,0 +1,16 @@
+在有包名的时候用命令行编译
+
+1、
+D:\>javac -d . *.java
+
+2、
+D:\>java video.note.tcpsocket.TCPServer
+
+3、
+C:\Users\hjkjkj>d:
+
+D:\>java video.note.tcpsocket.TCPClient
+
+4、
+D:\>java video.note.tcpsocket.TCPServer
+127.0.0.1has connected

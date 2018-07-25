@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var username=document.getElementById('username')
+				var rs=document.getElementById('result');
+				//失去焦点，触发事件
+				username.onblur=function(){
+					if(username.value==null ||username.value==""){
+						rs.innerHTML='<font color="red">用户名不能为空</font>';
+					}else if(username.value.length>=6){
+						rs.innerHTML='<font color="red">用户名长度不能大于6</font>'
+					}
+				}
+			}
+			function check(){
+				var username=document.getElementById('username').value;
+				var rs=document.getElementById('result');
+				if(username==null||username==""){
+					rs.innerHTML='<font color="red">用户名不能为空</font>';
+					return false;    //返回false表示阻止提交
+				}else{
+					return true;
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form action="index.html" onsubmit="return check();">
+			用户名:<input type="text" id="username"><span id="result"></span>
+			     <br>
+		         <input type="submit" value="注册" />
+			
+			
+		</form>
+		
+		
+	</body>
+</html>

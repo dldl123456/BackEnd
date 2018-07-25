@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width:200px;
+				height:300px;
+				border:1px solid red;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				/*
+				var btn=document.getElementById('btn');
+				btn.onclick=fun;
+				
+				function fun(){
+					alert('脚本模型');
+				}
+				*/
+				var text=document.getElementById('txt');
+				//失去焦点
+				text.onblur=function(){
+					alert('xxxxx');
+				}
+				//文本框内容改变发生
+				text.onchange=function(){
+					alert('change...');
+				}
+				//选中内容
+				text.onselect=function(){
+					alert('select...');
+				}
+				
+				
+				var city=document.getElementById('city');
+				city.onchange=function(){
+					alert('city..');
+				}
+			  /*
+		       var btn=document.getElementById('btn');
+		       btn.onmouseout=function(){
+		       	   alert('移出.');
+		       }
+		        btn.onmouseover=function(){
+		       	 alert('移入');
+		       }
+		       */
+		       var div=document.getElementById('box');
+		        div.onmouseout=function(){
+		       	  div.style.backgroundColor='red';
+		       }
+		        div.onmouseover=function(){
+		       	   div.style.backgroundColor='green';
+		       }
+			}
+			
+		</script>
+	</head>
+	<body>
+		<!--
+        	作者：25952312@qq.com
+        	时间：2018-06-02
+        	描述：内联模型
+        	<input type="button" value="点我吧!" id="btn" onclick="alert('Test');">
+        -->
+                     用户名:<input type="text" id="txt">
+		<input type="button" value="点我吧!" id="btn">
+		<select id="city">
+			<option value="x">xxx</option>
+			<option value="y">yyy</option>
+			<option value="z">zzz</option>
+			
+		</select>
+		<div id="box"></div>
+	</body>
+</html>

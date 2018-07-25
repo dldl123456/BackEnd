@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 了解 -->
+
+	<!-- 通知配置 -->
+	<bean id="beforePF"
+		class="com.zhizuobiao.day3.notification.AopNotificationProxyFactoryBefore"></bean>
+
+	<!-- 静态切入点 -->
+	<bean id="nameCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<!-- 方法名字切入点 -->
+		<property name="mappedName" value="deleteUser"></property>
+	</bean>
+
+	<bean id="regexpAdvisor"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<!-- 正则匹配 -->
+		<property name="pattern" value=".*User.*"></property>
+		<!-- 通知 -->
+		<property name="advice" ref="beforePF"></property>
+	</bean>
+
+
+	<!-- 定义切面（切入点和通知，2个组成） -->
+	<bean id="nameAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<!-- 切入点 -->
+		<!-- 方法名和正则，2个切入点切换。都可以 -->
+		<property name="pointcut" ref="nameCut"></property>
+		<!-- 通知 -->
+		<property name="advice" ref="beforePF"></property>
+	</bean>
+
+	<!-- 代理目标 -->
+	<bean id="userService" class="com.zhizuobiao.day3.service.impl.UserServiceImpl"></bean>
+
+	<!-- spring 代理工厂 -->
+	<bean id="myProxyFactory" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<!-- 设置目标类（增强） -->
+		<property name="target" ref="userService"></property>
+		<property name="interceptorNames">
+			<list>
+				<!--<value>before</value> -->
+				<!--<value>after</value> -->
+				<!-- 切面(包含切入点和通知) -->
+				<!-- <value>nameAdvisor</value> -->
+				<value>regexpAdvisor</value>
+			</list>
+		</property>
+	</bean>
+</beans>

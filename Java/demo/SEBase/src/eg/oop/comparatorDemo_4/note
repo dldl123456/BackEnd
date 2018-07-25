@@ -1,0 +1,13 @@
+/*
+	* java.lang.Comparable接口:此接口强行对实现它的每个类的对象进行整体排序。
+	* 排序规则在compareTo()方法中定义。
+	* 当调用java.util.Arrays类中sort(Object[] objs)时，
+	* 程序会调用compareTo()方法对对象进行比较，
+	* 如果该方法返回正整数(1)时，代表当前对象大于待比较对象；
+	* 如果返回0，代表当前对象等于待比较对象
+	* 如果该方法返回负整数(-1)时，代表当前对象小于待比较对象；
+	*实现思路:
+	*1.实现Comparable接口，并重新其compareTo方法
+	*2.在compareTo方法中定义比较规则。返回值应该是正整数，零和负整数。
+	*3.在调用Arrays.sort(Object[] objs)方法的过程中，sort方法的内部对调用compareTo方法进行比较。
+ */

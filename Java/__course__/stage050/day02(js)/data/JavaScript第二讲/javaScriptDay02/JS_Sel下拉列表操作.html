@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function createSel(){
+            var div=document.getElementById("showId");
+            //等价于<select></select>
+            var mySel=document.createElement("select");
+            //获取到下拉列表里面的option数据集(数组)
+            var options=mySel.options;//[]
+            for(var i=1970;i<new Date().getFullYear();i++){
+                //i=0等价于第一个option
+                //Option(i,i)第一个参数指的是文本节点 ，第二个参数value对应的属性值
+                options[i-1970]=new Option(i+"年",i);
+            }
+            //设置一个id属性
+            mySel.id="selId";
+            div.appendChild(mySel);
+        }
+        function delLastSel(){
+            var mySel=document.getElementById("selId");
+            var lastIndex=mySel.options.length-1;//最后一个option对应的索引值
+            //根据下标索引删除option
+            mySel.remove(lastIndex);
+        }
+        function delAllSel(){
+            var mySel=document.getElementById("selId");
+            mySel.options.length=0;//清空数组[]
+        }
+    </script>
+</head>
+<body>
+    <!--通用方式绑定点击事件-->
+    <input type="button" value="创建下拉列表" onclick="createSel()"><br/>
+    <input type="button" value="删除最后一个下拉选项"
+           onclick="delLastSel()"><br/>
+    <input type="button" value="清空整个下拉列表"
+           onclick="delAllSel()"><br/>
+    <div id="showId">
+
+    </div>
+</body>
+</html>

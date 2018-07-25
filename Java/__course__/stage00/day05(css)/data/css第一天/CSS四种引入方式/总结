@@ -1,0 +1,9 @@
+对同一个html文档同时使用多种css引入方式，影响力
+从大到小的顺序为:
+内联>内部>import>link
+
+
+<p>11111</p>
+内联：color:red
+内部方式：color:green;
+

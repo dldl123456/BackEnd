@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhizuobiao.dao.OrderDao">
+
+
+	<!-- 使用二级缓存 -->
+	<!--   <cache></cache>  -->
+	
+	<!-- 使用ehcache二级缓存 -->
+	<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
+	<!-- 查询所有订单信息 -->
+	<select id="getOrdersUserCustomList" resultType="ordersUserCustom">
+		SELECT
+		orders.*,
+		user.username,
+		user.address
+		FROM
+		orders, user
+		WHERE orders.user_id =
+		user.id
+	</select>
+
+
+	<!-- 查询所有订单信息【包含关联用户内容】 -->
+	<select id="getOrdersList" resultMap="userOrdersMap">
+		SELECT
+			orders.*,
+			user.username,
+			user.address,
+			user.sex,
+			user.birthday
+		FROM
+			orders, user
+		WHERE 
+			orders.user_id = user.id
+	</select>
+
+
+	<select id="getOrdersLazyList" resultMap="userOrdersLazyMap">
+		SELECT
+			orders.*
+		FROM
+			orders
+	</select>
+	<!-- 订单信息resultmap -->
+	<resultMap type="orders" id="userOrdersLazyMap">
+		<id property="id" column="id" />
+		<result property="state" column="state" />
+		<result property="createTime" column="create_time" />
+		<association property="user" javaType="user"
+			select="com.zhizuobiao.dao.UserDao.getUser" column="user_id" />
+	</resultMap>
+
+	<!-- 一对一映射 -->
+	<!-- 订单查询结果信息resultmap，关联用户的内容 -->
+	<!-- type:数据库结果行，对应的对象类型 -->
+	<resultMap type="orders" id="userOrdersMap">
+		<!-- 普通类型的标签 -->
+		<!-- 这里的id，是mybatis在进行一对一查询时将user字段映射为user对象时要使用，必须写 -->
+		<id property="id" column="id" />
+		<result property="state" column="state" />
+		<result property="createTime" column="create_time" />
+		<!-- 对象类型的标签 -->
+		<association property="user" javaType="user">
+			<!-- 这里的id为user的id，如果写上表示给user的id属性赋值 -->
+			<id property="id" column="user_id" />
+			<result property="username" column="username" />
+			<result property="address" column="address" />
+			<result property="sex" column="sex" />
+			<result property="birthday" column="birthday" />
+		</association>
+	</resultMap>
+	
+	
+	<!-- 查询所有订单信息【包含关联用户内容、订单详情内容】 -->
+	<select id="getOrdersDetailList" resultMap="userOrdersDetailMap">
+		SELECT
+			orders.*, USER .username,
+			USER .address,
+			order_detail.id order_detail_id,
+			order_detail.items_num,
+			order_detail.total_price,
+			items. NAME items_name,
+			items.price items_price,
+			items.id items_id
+		FROM
+			orders,
+			USER,
+			order_detail,
+			items
+		WHERE
+			USER .id = orders.user_id
+		AND orders.id = order_detail.orders_id
+		AND order_detail.items_id = items.id
+	</select>
+
+	<!-- 订单信息resultmap -->
+	<!-- 重复的resultMap，使用继承的方法 --> 
+	<resultMap type="orders" id="userOrdersDetailMap" extends="userOrdersMap">
+		<!-- 一对多标签 -->
+		<collection property="orderDetailList" ofType="orderDetail">
+			<id property="id" column="order_detail_id" />
+			<result property="totalPrice" column="total_price" />
+			<result property="itemsNum" column="items_num" />
+			
+			<!-- 订单详情里的items对象映射 -->
+			<association property="items" javaType="items">
+	  			 <id column="items_id" property="id"/>
+	   			 <result column="items_name" property="name"/>
+	   			 <result column="items_price" property="price"/>
+			</association>
+		</collection>
+	</resultMap>  
+</mapper>

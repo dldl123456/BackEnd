@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{background: red;}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var div=document.getElementById('box');
+				/*
+				alert(div.nodeName); //元素节点div
+				alert(div.nodeType);
+				alert(div.nodeValue);
+				*/
+				/*
+				alert(div.firstChild.nodeName);  //第一个子节点mydiv(文本节点)
+				alert(div.firstChild.nodeType);
+				alert(div.firstChild.nodeValue);
+				
+				alert(div.lastChild.nodeName);
+				*/
+				alert(div.parentNode.nodeName);
+				
+				var sp=document.getElementById('sp');
+				//sp.style.background='green';
+				var nodes=sp.childNodes;
+				for(var i=0;i<nodes.length;i++){
+					alert(nodes[i].nodeName);
+				}
+				
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<span id="sp">xxxx<div id="box">mydiv<p>xxxx</p></div></span>
+	</body>
+</html>

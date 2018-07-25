@@ -1,0 +1,25 @@
+https://github.com/webcodder/zhihu-crawler
+
+工程导入(maven)
+git clone https://github.com/wycm/zhihu-crawler 克隆项目到本地
+eclipse导入步骤(eclipse_kepler版本，自带maven)，File->Import->Maven->Existing Maven Projects->选择刚刚clone的zhihu-crawler目录->导入成功
+idea导入步骤,File->Open->选择刚刚clone的zhihu-crawler目录->导入成功
+工程导入(不使用maven)
+eclipse或myeclipse都可以
+git clone https://github.com/wycm/zhihu-crawler 克隆项目到本地
+创建一个名字为zhihu-new-crawler（这个随便命名）的普通工程
+拷贝刚刚clone的zhihu-crawler/src/main/java/com目录到zhihu-new-crawler/src目录下
+右键工程->Build Path->Add External Archives...->导入zhihu-crawler/lib下的所有jar包
+将zhihu-crawler/src/main/resources目录下的config.properties和log4j.properties拷贝至src目录下
+Quick Start
+Run with Main.java
+
+
+
+持久化配置
+如果要持久化数据到mysql，先手动创建数据库，然后修改配置文件config.properties的如下属性。
+db.enable = true
+db.host =ip地址
+db.username = 用户名
+db.password = 密码
+db.name = 数据库名

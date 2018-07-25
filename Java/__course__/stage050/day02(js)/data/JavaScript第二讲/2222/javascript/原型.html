@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 每一个函数都有一个原型
+			 * 原型：共享对象的属性与方法
+			 */
+			function Person(){};  //构造方法
+			Person.prototype.name='容儿';
+			Person.prototype.age=22;
+			Person.prototype.eat=function(){
+				alert(this.name+'吃东东...');
+			}
+			
+			var p1=new Person();
+			var p2=new Person();
+			alert(p1.eat==p2.eat);  //true,共享。引用是一致的，
+			
+			
+			//原理另一种写法（字面量的写法...）
+			
+			
+			String.prototype.addString=function(){
+				return this+'xxxxx';
+			}
+			
+			var str='abc';
+			alert(str.addString()+"****");  //改变系统对象String 动态addString()方法。
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

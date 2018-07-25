@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 字面常量原型
+			 */
+			function Student(){};  //constructor属性
+			Student.prototype={
+		      constructor:Student,  //指向Student
+			  name:'容儿',
+			  age: 22,
+			  eat:function(){
+			  	alert(this.name+"吃东东");
+			  }
+			}
+			
+			var stu=new Student();
+			stu.eat();
+			
+			alert(stu instanceof Student);
+			alert(stu instanceof Object);
+			
+			alert(stu.constructor==Student);  //指向Object,false
+			alert(stu.constructor==Object);   //指向Object true;
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

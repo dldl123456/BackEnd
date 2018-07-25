@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="script/jquery-1.11.3.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        $(function(){
+            //长度，高度，清晰度渐变的方式显示图片
+            $("input:eq(0)").bind("click",function(){
+                $("p>img").show(3000);//单位毫秒
+            });
+            //长度，高度，清晰度渐变的方式隐藏图片
+            $("input:eq(1)").bind("click",function(){
+                $("p>img").hide(3000);
+            });
+            //hide以及show的合成事件
+            $("input:eq(2)").bind("click",function(){
+               $("p>img").toggle(2000);
+            });
+            //清晰度渐变的方式隐藏图片
+            $("input:eq(3)").bind("click",function(){
+                $("p>img").fadeOut(2000);
+            });
+            //清晰度渐变的方式显示图片
+            $("input:eq(4)").bind("click",function(){
+                $("p>img").fadeIn(2000);
+            });
+            //设置指定的清晰度//0完全隐藏，1完全显示
+            $("input:eq(5)").bind("click",function(){
+                $("p>img").fadeTo(2000,0.5);//1代表完全显示   0代表完全隐藏
+            });
+             //fadeOut，fadeIn合成事件
+            $("input:eq(6)").bind("click",function(){
+                    $("p>img").fadeToggle(2000);
+            });
+            //长度，高度渐变的方式改变隐藏图片
+            $("input:eq(7)").bind("click",function(){
+                $("p>img").slideUp(2000);
+            });
+            //长度，高度渐变的方式改变显示图片
+            $("input:eq(8)").bind("click",function(){
+                $("p>img").slideDown(2000);
+            });
+            //slideUp,slideDown的合成事件
+            $("input:eq(9)").bind("click",function(){
+                $("p>img").slideToggle(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="show"/><br/>
+<input type="button" value="hide"/><br/>
+<input type="button" value="toggle"/><br/>
+<input type="button" value="fadeout"/><br/>
+<input type="button" value="fadein"/><br/>
+<input type="button" value="fadeto"/><br/>
+<input type="button" value="fadetoggle"/><br/>
+<input type="button" value="slideup"/><br/>
+<input type="button" value="slidedown"/><br/>
+<input type="button" value="slidetoggle"/><br/>
+<p><img src="images/photo-1.jpg"></p>
+</body>
+</html>

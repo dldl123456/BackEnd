@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.selectOption{
+				width:200px;
+				height:400px;
+				font-size: 20px;
+				margin-top: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var img=document.getElementById('im')
+				img.src="img/222.jpg";
+				
+				
+				var btn=document.getElementById('btn');
+				btn.onclick=function(){
+					var left_select=document.getElementById('leftName');
+					//alert(left_select.length);  //5
+					var right_select=document.getElementById('rightName');
+					for(var i=0;i<left_select.length;i++){
+						if(left_select.options[i].selected==true){
+							 //创建一个option节点
+							var option=document.createElement('option');
+							//option节点赋值
+							option.text=left_select.options[i].text;
+							option.value=left_select.options[i].value;
+							//option节点绑定到rightName下拉列表框
+							
+							right_select.add(option);
+							
+							//移除左边的被移动的选项;
+							left_select.removeChild(left_select.options[i]);
+							
+							
+						}
+					}
+				}
+			}
+			
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<img id="im">
+		<select id="leftName" size="10" multiple class="selectOption">
+			<option value="容儿1">容儿</option>
+			<option value="德华1">德华</option>
+			<option value="小花1">小花</option>
+			<option value="小白1">小白</option>
+			<option value="小明1">小明</option>
+			
+		</select>
+		<input type="button" value=">>>" id="btn">
+		<select id="rightName" size="10" multiple class="selectOption">
+			
+			
+		</select>
+	</body>
+</html>

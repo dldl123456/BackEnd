@@ -1,0 +1,9 @@
+/*
+ *  ÊÓÆµµÄ°¸Àý
+ */
+
+package video.eg.aa;
+
+public class A {
+
+}

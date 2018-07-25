@@ -1,0 +1,63 @@
+CSS（一）
+思考1：如果外部、内部、行级样式表都对一个表做修饰，怎么办？
+就近原则：行级样式表>内部样式表>外部样式表
+id选择器>class选择器>标签选择器
+CSS选择器
+1.基本选择器
+	标签选择器
+	class选择器
+	id选择器
+	通用选择器
+2.扩展选择器
+	组合选择器
+	关联选择器：采用空格隔开；
+		eg：p b{color:red}
+	伪类选择器：用冒号“：”定义；
+		1）静态伪类：只有两个，并只用于超链接
+			i）:link表示超链接点击前的颜色
+			ii）:visited表示超链接点击之后的颜色
+		注意：a:link{}定义的样式针对所有有href属性的超链接（不包括锚），只有a{}定义的样式针对所有的超链接（包括锚）
+		2）动态伪类：针对所有标签使用
+			i）:hover是移动到某个标签上的时候
+				eg：.center:hover{color:green}
+			ii）:focus是某个标签获得焦点的时候
+				eg：intput:focus{background-color:green}
+			iii）:active点击某个标签没有放松鼠标时
+				eg：a:active{color:bule}
+思考2：CSS优点？
+1.使数据和显示分开
+2.使整体网站的视觉效果统一
+3.降低网络流量（不用重复的写和加载重复的代码）
+4.开发效率提高
+5.维护方便
+CSS属性是使用
+1.字体设置
+eg：p{
+		font-size:50px;/*字体大小*/
+		font-style:italic ;/*斜体*/
+		font-weight:bold;/*粗体*/
+		font-family:幼圆;/*字体类型，可以写多个根据本机字体库查找如果第一个没有就按次序向下查找，都找不到就按照系统默认的*/
+		font-variant:small-caps;/*小写变大写*/
+	}
+2.文本设置
+eg：p{
+		letter-spacing:0.5cm ;/*字母间距*/
+		word-spacing:1cm;/*单词间距*/
+		text-align:center;/*在所包含容器的中间*/
+		text-decoration:overline;/*字体修饰underline下划线line-through中划线overline上划线*/
+		text-transform:lowercase;/*单词字体大小写*/
+		color:red ;
+	}
+3.背景设置
+eg：body{
+			background-color:#ff99ff ; /*背景颜色*/
+			background-image:url(images/2.gif) ; /*背景图片*/
+			background-repeat: no-repeat;/*no-repeat不要平铺，repeat-x,横向平铺，repeat-y纵向平铺*/
+			background-position:center right; /*背景位置*/
+			background-attachment: scroll ;/*背景的移动 ,fixed跟着滚动条一起移动，scroll不动*/
+	}
+4.边框设置
+eg：p.four{
+			border-style: solid;
+			border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255)
+	}

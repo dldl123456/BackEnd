@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="script/jquery-2.1.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#json_id").click(function(){
+                var json=[{"name":"zs1","age":18,"address":"上海市黄浦区"},
+                    {"name":"zs1","age":18,"address":"上海市黄浦区"},
+                    {"name":"zs1","age":18,"address":"上海市黄浦区"}];
+                var temp="";
+                for(var i=0;i<json.length;i++){
+                    temp+=
+                            "<tr>"+
+                            "<td>"+json[i].name+"</td>"+
+                            "<td>"+json[i].age+"</td>"+
+                            "<td>"+json[i].address+"</td>"+
+                            "</tr>"
+                }
+                $("#show").html(temp);
+            });
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="json_id" value="获取json数据">
+    <table id="show" border="1px" width="600px" style="border-collapse:collapse">
+
+    </table>
+</body>
+</html>

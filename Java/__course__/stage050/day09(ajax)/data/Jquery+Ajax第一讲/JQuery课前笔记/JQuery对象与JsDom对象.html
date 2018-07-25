@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="script/jquery-2.1.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //js 写？ alert
+            var js_dom=document.getElementById("uid");
+            //alert(js_dom.value);
+            //得到Jquery对象
+            var jquery_dom=$("#uid");
+            //alert(jquery_dom.val());
+            //jquery对象如何转化成js对象
+            var jqueryToJs=$(jquery_dom).get(0);
+           // alert(jqueryToJs.value);
+            //js对象转化成Jquery对象
+            var jsToJquery=$(js_dom);
+            alert(jsToJquery.val());
+
+
+
+
+
+
+        })
+    </script>
+</head>
+<body>
+        <input type="text" value="admin" id="uid"/>
+</body>
+</html>

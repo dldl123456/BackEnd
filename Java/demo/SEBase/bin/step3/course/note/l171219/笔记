@@ -1,0 +1,56 @@
+笔记：
+
+Math 
+
+
+异常：
+	导致程序不能正常往下执行。
+	
+常见的异常：
+空指针 NullPointerException
+输入类型错误  InputMismatchException
+数组下标越界  ArrayIndexOutOfBoundsException
+类没有找到   ClassNotFoundException
+算术异常  ArithmeticException
+类型转换异常  ClassCastException
+数字格式化异常  NumberFormatException
+日期转换异常  ParseException 
+
+错误：
+StackOverflowError
+
+处理异常：
+1.捕获 (自己处理异常)
+try-catch-finally
+try-可能出现异常的代码
+e.getMessage();//错误信息
+e.printStackTrace();//打印堆栈信息
+如果有多个catch ，异常父类Exception 要放在最后。
+如果只写子catch ，类型一定要对应。
+
+finally中的代码始终会执行，会在return之前执行。
+注意：System.exit() 之后 finally的代码不会再执行。
+
+2.抛出 (自己不处理，谁用谁处理)
+throws 声明要抛出的异常
+throw  抛出异常
+异常类型要一致 
+
+
+受查异常：
+非受查异常：
+
+
+自定义异常：
+必须继承一个异常父类： Exception  、    RuntimeException
+
+
+
+
+
+
+
+
+
+
+

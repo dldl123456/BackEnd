@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function createTable(){
+            var stuList=[{"name":"zs1","age":18,"score":666},
+                {"name":"zs2","age":18,"score":667},
+                {"name":"zs3","age":18,"score":668},
+                {"name":"zs4","age":18,"score":669}];
+            //<table></table>
+            var myTab=document.createElement("table");
+            for(var i=0;i<stuList.length;i++){
+                //i=0代表往表格中插入第一行，以此类推
+                var row=myTab.insertRow(i);
+                var col1=row.insertCell(0);
+                col1.innerHTML=stuList[i].name;
+                //往行里面插入列，i=0插入第一列 以此类推
+                var col2=row.insertCell(1);
+                col2.innerHTML=stuList[i].age;
+                var col3=row.insertCell(2);
+                col3.innerHTML=stuList[i].score;
+            }
+            var div=document.getElementById("showTable");
+            myTab.border="1px";
+            myTab.width="600px";
+            myTab.id="tabId"
+            div.appendChild(myTab);
+        }
+        function delLastRow(){
+            var myTab=document.getElementById("tabId");
+            var rows=myTab.rows;//表格行的结果集[]
+            //根据索引值删除表格中的行
+            myTab.deleteRow(rows.length-1);
+        }
+        function delLastCol(){
+            var myT=document.getElementById("tabId");
+            //获取表格中最后一行对应的索引值
+            var lastRowIndex=myT.rows.length-1;
+            //根据索引值获取最后一行对象
+            var lastRow=myT.rows[lastRowIndex];
+            //行的列集[]
+            var cols=lastRow.cells;
+            lastRow.deleteCell(cols.length-1);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="动态生成表格" onclick="createTable()">
+    <input type="button" value="删除表格最后一行" onclick="delLastRow()">
+    <input type="button" value="删除表格最后一行里面的最后一列"
+           onclick="delLastCol()">
+    <div id="showTable">
+
+    </div>
+</body>
+</html>

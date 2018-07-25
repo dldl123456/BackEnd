@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>WebServletDay02</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <!--超链接获取表单数据-->
+  <servlet>
+  	<servlet-name>aServlet</servlet-name>
+  	<servlet-class>com.itzzb.a.form.AServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>aServlet</servlet-name>
+  	<url-pattern>/aServlet</url-pattern>
+  </servlet-mapping>
+  <!--获取form表单数据-->
+  <servlet>
+  	<servlet-name>formServlet</servlet-name>
+  	<servlet-class>com.itzzb.form.FormServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>formServlet</servlet-name>
+  	<url-pattern>/formServlet</url-pattern>
+  </servlet-mapping>
+  <!--forward内部转发-->
+  <servlet>
+  	<servlet-name>loginServlet</servlet-name>
+  	<servlet-class>com.itzzb.disp.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>loginServlet</servlet-name>
+  	<url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!--successServlet-->
+  <servlet>
+  	<servlet-name>successServlet</servlet-name>
+  	<servlet-class>com.itzzb.disp.SuccessServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>successServlet</servlet-name>
+  	<url-pattern>/successServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>redirectServlet</servlet-name>
+  	<servlet-class>com.itzzb.redirect.RedirectServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>redirectServlet</servlet-name>
+  	<url-pattern>/redirectServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>success</servlet-name>
+  	<servlet-class>com.itzzb.redirect.SuccessServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>success</servlet-name>
+  	<url-pattern>/success</url-pattern>
+  </servlet-mapping>
+</web-app>
+
+
+
+

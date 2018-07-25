@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 对象包括属性与方法/函数
+			 * new Object()创建对象的方式，缺点：存在大量的重复代码, 对象混淆，
+			 */
+			var Person=new Object();   //自定义对象
+			Person.name='容儿';
+			Person.age=22;
+			Person.eat=function(){
+				alert(this.name+" 吃东东");
+			}
+			
+			alert(Person.name);
+			Person.eat();
+			
+			var Person2=Person;
+			Person2.name="小花";
+			alert(Person2.name+"***");
+			alert(Person.name+"&&&&");
+			
+			/*
+		    var Person2=new Object();   //自定义对象
+			Person2.name='祖儿';
+			Person2.age=23;
+			Person2.eat=function(){
+				alert(this.name+" 吃东东");
+			}
+			
+			alert(Person2.name);
+			Person2.eat();
+			*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

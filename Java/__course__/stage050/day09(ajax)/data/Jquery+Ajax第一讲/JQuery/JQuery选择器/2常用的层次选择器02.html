@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="utf-8"/>
+      <script src="script/jquery-2.1.0.js" type="text/javascript"></script>
+	  <script type="text/javascript">
+	  $(function(){
+		//得到div中的所有a标签  （获取div中的所有后代a标签）
+        //输出div直接input儿子节点
+       //输出id为next的紧接着的后一个兄弟元素
+       //输出id为next后的所有同级别元素
+	  });
+	  </script>
+   </head>
+   <body>
+     <div id="divTest">
+       <input type="text" value="投资" />
+       <input id="next" type="text" />
+       <a>123</a>
+       <input type="text"  value="担当" />
+         <a>123<a>456</a></a>
+       <input type="text" title="学习" value="学习" />
+         <input type="text"  value="股票" />
+       <a>1<input type="text"  value="股票" /></a>
+       <a>2
+           <a>3</a>
+           <a></a>
+       </a>
+     </div>
+   </body>
+</html>

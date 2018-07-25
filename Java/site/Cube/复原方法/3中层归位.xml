@@ -1,0 +1,210 @@
+<CubeMarkup version="8">
+  <Cube explode="0" id="o1" scale="100" default="true" twistDuration="400" alpha="-25" beta="45" kind="RubiksCube">
+    <Name>&#x4e2d;&#x5c42;&#x5f52;&#x4f4d;</Name>
+    <Description/>
+    <Author>Administrator</Author>
+    <Date>Apr 17, 2010 11:19:52 AM</Date>
+    <Color id="o2" argb="ffcc0000">Stickers Right</Color>
+    <Color id="o3" argb="ffffff00">Stickers Up</Color>
+    <Color id="o4" argb="ff003399">Stickers Front</Color>
+    <Color id="o5" argb="ffff6600">Stickers Left</Color>
+    <Color id="o6" argb="ffffffff">Stickers Down</Color>
+    <Color id="o7" argb="ff33ff33">Stickers Back</Color>
+    <Color id="o8" argb="ff101010">Outer Parts</Color>
+    <Color id="o9" argb="fff8f8f8">Center Part</Color>
+    <Color id="o10" argb="ff000000">Outlines</Color>
+    <Part index="0" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="1" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="2" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="3" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="4" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="5" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="6" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="7" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="8" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="9" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="10" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="11" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="12" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="13" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="14" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="15" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="16" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="17" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="18" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="19" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="20" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="21" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="22" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="23" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="24" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="25" visible="true" fillColorRef="o8" outlineColorRef="o10"/>
+    <Part index="26" visible="true" fillColorRef="o9" outlineColorRef="o10"/>
+    <Sticker index="0" visible="false" fillColorRef="o2"/>
+    <Sticker index="1" visible="false" fillColorRef="o2"/>
+    <Sticker index="2" visible="false" fillColorRef="o2"/>
+    <Sticker index="3" visible="true" fillColorRef="o2"/>
+    <Sticker index="4" visible="true" fillColorRef="o2"/>
+    <Sticker index="5" visible="true" fillColorRef="o2"/>
+    <Sticker index="6" visible="true" fillColorRef="o2"/>
+    <Sticker index="7" visible="true" fillColorRef="o2"/>
+    <Sticker index="8" visible="true" fillColorRef="o2"/>
+    <Sticker index="9" visible="false" fillColorRef="o3"/>
+    <Sticker index="10" visible="false" fillColorRef="o3"/>
+    <Sticker index="11" visible="false" fillColorRef="o3"/>
+    <Sticker index="12" visible="false" fillColorRef="o3"/>
+    <Sticker index="13" visible="true" fillColorRef="o3"/>
+    <Sticker index="14" visible="false" fillColorRef="o3"/>
+    <Sticker index="15" visible="false" fillColorRef="o3"/>
+    <Sticker index="16" visible="false" fillColorRef="o3"/>
+    <Sticker index="17" visible="false" fillColorRef="o3"/>
+    <Sticker index="18" visible="false" fillColorRef="o4"/>
+    <Sticker index="19" visible="false" fillColorRef="o4"/>
+    <Sticker index="20" visible="false" fillColorRef="o4"/>
+    <Sticker index="21" visible="true" fillColorRef="o4"/>
+    <Sticker index="22" visible="true" fillColorRef="o4"/>
+    <Sticker index="23" visible="true" fillColorRef="o4"/>
+    <Sticker index="24" visible="true" fillColorRef="o4"/>
+    <Sticker index="25" visible="true" fillColorRef="o4"/>
+    <Sticker index="26" visible="true" fillColorRef="o4"/>
+    <Sticker index="27" visible="false" fillColorRef="o5"/>
+    <Sticker index="28" visible="false" fillColorRef="o5"/>
+    <Sticker index="29" visible="false" fillColorRef="o5"/>
+    <Sticker index="30" visible="true" fillColorRef="o5"/>
+    <Sticker index="31" visible="true" fillColorRef="o5"/>
+    <Sticker index="32" visible="true" fillColorRef="o5"/>
+    <Sticker index="33" visible="true" fillColorRef="o5"/>
+    <Sticker index="34" visible="true" fillColorRef="o5"/>
+    <Sticker index="35" visible="true" fillColorRef="o5"/>
+    <Sticker index="36" visible="true" fillColorRef="o6"/>
+    <Sticker index="37" visible="true" fillColorRef="o6"/>
+    <Sticker index="38" visible="true" fillColorRef="o6"/>
+    <Sticker index="39" visible="true" fillColorRef="o6"/>
+    <Sticker index="40" visible="true" fillColorRef="o6"/>
+    <Sticker index="41" visible="true" fillColorRef="o6"/>
+    <Sticker index="42" visible="true" fillColorRef="o6"/>
+    <Sticker index="43" visible="true" fillColorRef="o6"/>
+    <Sticker index="44" visible="true" fillColorRef="o6"/>
+    <Sticker index="45" visible="false" fillColorRef="o7"/>
+    <Sticker index="46" visible="false" fillColorRef="o7"/>
+    <Sticker index="47" visible="false" fillColorRef="o7"/>
+    <Sticker index="48" visible="true" fillColorRef="o7"/>
+    <Sticker index="49" visible="true" fillColorRef="o7"/>
+    <Sticker index="50" visible="true" fillColorRef="o7"/>
+    <Sticker index="51" visible="true" fillColorRef="o7"/>
+    <Sticker index="52" visible="true" fillColorRef="o7"/>
+    <Sticker index="53" visible="true" fillColorRef="o7"/>
+  </Cube>
+  <Notation id="o11" default="true" layerCount="3">
+    <Name>Harris ENG 3x3</Name>
+    <Description>Harris ENG is the notation used on Dan&apos;s Cube Station site.&#xa;http://www.cubestation.co.uk/&#xa;&#xa;The Harris ENG notation devised by Dan Harris describes sequences of moves.&#xa;&#xa;Notation used for sequences of moves&#xa;----------------------------------&#xa;This notation uses single character tokens for all 90&#xb0; moves.&#xa;&#xa;Clockwise 90&#xb0; twists of the surface layers are denoted by the capital letters: &#xab;R&#xbb;, &#xab;U&#xbb;, &#xab;F&#xbb;, &#xab;L&#xbb;, &#xab;D&#xbb; and &#xab;B&#xbb;, (right, up, front, left, down, back).&#xa;&#xa;Clockwise 90&#xb0; twists of two adjacent layers are denoted by the lower-case letters: &#xab;r&#xbb;, &#xab;u&#xbb;, &#xab;f&#xbb;, &#xab;l&#xbb;, &#xab;d&#xbb; and &#xab;b&#xbb;.&#xa;&#xa;Clockwise 90&#xb0; twists of the three middle layers are denoted by &#xab;M&#xbb;, &#xab;E&#xbb; and &#xab;S&#xbb;, (layer between R-L, U-D, and F-B).&#xa;&#xa;Clockwise 90&#xb0; twists of two outer layers are denoted by the lower-case letters: &#xab;m&#xbb;, &#xab;e&#xbb;, and &#xab;s&#xbb;.&#xa;&#xa;Clockwise 90&#xb0; rotations of the whole cube over the three face centered axes of the cube are denoted by &#xab;x&#xbb;, &#xab;y&#xbb;, and &#xab;z&#xbb;, (x-axis, y-Axis, and z-axis) .&#xa;&#xa;180&#xb0; twists and rotations are denoted by appending the number &#xab;2&#xbb; to a move: &#xab;U2&#xbb;, &#xab;M2&#xbb;, &#xab;x2&#xbb;, ... .&#xa;&#xa;Counterclockwise twists and rotations are denoted by applying the inversion operator &#xab;&apos;&#xbb; to a move: &#xab;U&apos;&#xbb;, &#xab;M&apos;&#xbb;, &#xab;x&apos;&#xbb;, ... .&#xa;&#xa;Sequences of moves can be grouped using brackets: &#xab;(R U F)&#xbb;.&#xa;&#xa;Sequences of moves can be repeated multiple times by appending a &#xab;*&#xbb; and the number of repetitions to the closing bracket: &#xab;(R U F)*3&#xbb;.&#xa;&#xa;Sequences of moves can be inverted by appending the invertor operator &#xab;&apos;&#xbb; to the closing bracket: &#xab;(R U F)&apos;&#xbb;.&#xa;&#xa;Repition counts and inversions can be combined: &#xab;(R U F)*3&apos;&#xbb; or &#xab;(R U F)&apos;*3&#xbb;.&#xa;&#xa;Moves can be delimited using a no operation marker: &#xab;.&#xbb; (dot).&#xa;&#xa;Comments&#xa;---------&#xa;Comments are enclosed in square brackets: &#xab;[this is a comment]&#xbb;.</Description>
+    <Author>Dan Harris</Author>
+    <Date>2007</Date>
+    <Statement symbol="comment">
+      <Token symbol="commentMultiLineBegin">[</Token>
+      <Token symbol="commentMultiLineEnd">]</Token>
+    </Statement>
+    <Statement symbol="NOP">
+      <Token symbol="NOP">.</Token>
+    </Statement>
+    <Statement symbol="move">
+      <Token axis="x" layerList="1" angle="-180">L2</Token>
+      <Token axis="x" layerList="1" angle="-90">L</Token>
+      <Token axis="y" layerList="1" angle="-180">D2</Token>
+      <Token axis="y" layerList="1" angle="-90">D</Token>
+      <Token axis="z" layerList="1" angle="-180">B2</Token>
+      <Token axis="z" layerList="1" angle="-90">B</Token>
+      <Token axis="x" layerList="2" angle="-180">M2</Token>
+      <Token axis="x" layerList="2" angle="-90">M</Token>
+      <Token axis="y" layerList="2" angle="-180">E2</Token>
+      <Token axis="y" layerList="2" angle="-90">E</Token>
+      <Token axis="z" layerList="2" angle="90">S</Token>
+      <Token axis="z" layerList="2" angle="180">S2</Token>
+      <Token axis="x" layerList="1,2" angle="-90">l</Token>
+      <Token axis="x" layerList="1,2" angle="180">l2</Token>
+      <Token axis="y" layerList="1,2" angle="-90">d</Token>
+      <Token axis="y" layerList="1,2" angle="180">d2</Token>
+      <Token axis="z" layerList="1,2" angle="-90">b</Token>
+      <Token axis="z" layerList="1,2" angle="180">b2</Token>
+      <Token axis="x" layerList="3" angle="90">R</Token>
+      <Token axis="x" layerList="3" angle="180">R2</Token>
+      <Token axis="y" layerList="3" angle="90">U</Token>
+      <Token axis="y" layerList="3" angle="180">U2</Token>
+      <Token axis="z" layerList="3" angle="90">F</Token>
+      <Token axis="z" layerList="3" angle="180">F2</Token>
+      <Token axis="x" layerList="1,3" angle="-180">m2</Token>
+      <Token axis="x" layerList="1,3" angle="-90">m</Token>
+      <Token axis="y" layerList="1,3" angle="-180">e2</Token>
+      <Token axis="y" layerList="1,3" angle="-90">e</Token>
+      <Token axis="z" layerList="1,3" angle="90">s</Token>
+      <Token axis="z" layerList="1,3" angle="180">s2</Token>
+      <Token axis="x" layerList="2,3" angle="90">r</Token>
+      <Token axis="x" layerList="2,3" angle="180">r2</Token>
+      <Token axis="y" layerList="2,3" angle="90">u</Token>
+      <Token axis="y" layerList="2,3" angle="180">u2</Token>
+      <Token axis="z" layerList="2,3" angle="90">f</Token>
+      <Token axis="z" layerList="2,3" angle="180">f2</Token>
+      <Token axis="x" layerList="1,2,3" angle="90">x</Token>
+      <Token axis="x" layerList="1,2,3" angle="180">x2</Token>
+      <Token axis="y" layerList="1,2,3" angle="90">y</Token>
+      <Token axis="y" layerList="1,2,3" angle="180">y2</Token>
+      <Token axis="z" layerList="1,2,3" angle="90">z</Token>
+      <Token axis="z" layerList="1,2,3" angle="180">z2</Token>
+    </Statement>
+    <Statement symbol="grouping">
+      <Token symbol="groupingBegin">(</Token>
+      <Token symbol="groupingEnd">)</Token>
+    </Statement>
+    <Statement syntax="suffix" symbol="inversion">
+      <Token symbol="invertor">&apos;</Token>
+    </Statement>
+    <Statement enabled="false" syntax="prefix" symbol="reflection"/>
+    <Statement enabled="false" syntax="precircumfix" symbol="conjugation"/>
+    <Statement enabled="false" syntax="precircumfix" symbol="commutation"/>
+    <Statement enabled="false" syntax="precircumfix" symbol="rotation"/>
+    <Statement enabled="false" syntax="precircumfix" symbol="permutation"/>
+    <Statement symbol="delimiter"/>
+    <Statement syntax="suffix" symbol="repetition">
+      <Token symbol="repetitionBegin">*</Token>
+    </Statement>
+  </Notation>
+  <Script id="o12" scriptType="solver" cubeRef="o1" notationRef="o11">
+    <Name>&#x4e2d;&#x5c42;&#x56db;&#x68f1;&#x5f52;&#x4f4d;1</Name>
+    <Description/>
+    <Source>URU&apos;R&apos;U&apos;F&apos;UF</Source>
+    <Author>Administrator</Author>
+    <Date>Apr 17, 2010 1:34:23 PM</Date>
+  </Script>
+  <Script id="o13" scriptType="solver" cubeRef="o1" notationRef="o11">
+    <Name>&#x4e2d;&#x5c42;&#x56db;&#x68f1;&#x5f52;&#x4f4d;2</Name>
+    <Description/>
+    <Source>yU&apos;L&apos;ULUy&apos;RU&apos;R&apos;</Source>
+    <Author>Administrator</Author>
+    <Date>Apr 17, 2010 1:42:48 PM</Date>
+  </Script>
+  <Script id="o14" scriptType="solver" cubeRef="o1" notationRef="o11">
+    <Name>&#x4e2d;&#x5c42;&#x56db;&#x68f1;&#x5f52;&#x4f4d;3</Name>
+    <Description/>
+    <Source>URU&apos;R&apos;U&apos;F&apos;UF&#xa;U2&#xa;URU&apos;R&apos;U&apos;F&apos;UF&#xa;</Source>
+    <Author>Administrator</Author>
+    <Date>Apr 17, 2010 1:59:57 PM</Date>
+  </Script>
+  <Text id="o15">
+    <Title>Welcome</Title>
+    <Body>Welcome to CubeTwister.&#xa;&#xa;This is the template document, which automatically loads when you start CubeTwister for the first time.&#xa;&#xa;This template document takes quite some time to load. In the final version you will be able to change it using a settings panel.&#xa;(Use the settings panel to specify whether CubeTwister shall open a blank document, the demo document or a document of your choice when opening a new window.)&#xa;&#xa;This software is free.&#xa;If you have a feature request, or if you want to honour my work, send me a bottle of good wine.&#xa;&#xa;You can download the latest version from here:&#xa;http://www.randelshofer/cubetwister/&#xa;&#xa;I hope you enjoy using CubeTwister.&#xa;&#xa;Werner Randelshofer&#xa;&#xa;CubeTwister is Copyright &#xa9; 2003-2010 by Werner Randelshofer&#xa;All rights reserved.</Body>
+    <Author>Werner Randelshofer</Author>
+    <Date>January 2010</Date>
+  </Text>
+  <Text id="o16">
+    <Title>What&apos;s Working?</Title>
+    <Body>In this alpha release, the following functionality is available:&#xa;&#xa;General:&#xa;-------&#xa;Done:&#xa;- New Mac OS X tiger style user interface&#xa;- The Mac OS X application framework is working (document windows, loading/saving files, undo/redo, copy/paste).&#xa;- Support for a flat rendering 3D engine and a phong shading 3D engine implemented.&#xa;- CubeTwister starts so fast, that no splash screen is needed.&#xa;- Export function for HTML pages.&#xa;- Help function&#xa;&#xa;To do:&#xa;- Add support for more operating systems (currently only Mac OS X)&#xa;- Add import functions&#xa;- Add drag and drop support&#xa;- Enhance the export function for HTML pages&#xa;- Update help texts&#xa;&#xa;Cube editor:&#xa;----------&#xa;Done:&#xa;- Mostly finished&#xa;- Supports a variety of cube models ranging from 2x2 to 7x7 cubes.&#xa;- Sticker images can be applied to all cube models&#xa;To do:&#xa;- Implement support for background colors and background pictures&#xa;- Implement undo/redo support&#xa;&#xa;Notation editor:&#xa;-------------&#xa;Done:&#xa;- Mostly finished.&#xa;- Supports notations ranging from 2x2 to 7x7 cubes.&#xa;- Clipboard support&#xa;To do:&#xa;- Implement undo redo support&#xa;&#xa;Script editor:&#xa;----------&#xa;Done:&#xa;- Layout of the main panel&#xa;- Rubik&apos;s Cubes can be solved&#xa;- Sticker editor for entering an unsolved cube&#xa;- Scripts can be exported as videos&#xa;- Secondary Cube View&#xa;To do:&#xa;- Most of the functionality is not there yet, don&apos;t be surprised if many buttons and menus don&apos;t work!!&#xa;- Implement solvers and generators for more cube types &#xa;- Implement script translation support&#xa;- Implement script rotation support&#xa;- Implement undo/redo support&#xa;&#xa;Notes editor:&#xa;----------&#xa;Done:&#xa;- Finished&#xa;To do:&#xa;- Maybe add support for styled text (or postpone this for the next major release)&#xa;&#xa;HTML Export&#xa;------&#xa;Done:&#xa;- Export HTML with interactive Java applets ranging from 2x2 to 5x5 cubes &#xa;To do:&#xa;- Ensure backwards compatibility with the old CubePlayer applets. &#xa;- Export a CubeTwister document as HTML with Java applets or with PNG images &#xa;- Ensure export works for cubes with 6x6 and 7x7 layers&#xa;- Improve compatibility with future HTML 5 standard </Body>
+    <Author>Werner Randelshofer</Author>
+    <Date>January 2010</Date>
+  </Text>
+  <Text id="o17">
+    <Title>What&apos;s New?</Title>
+    <Body>Changes in Version 2.0alpha113  2010-02-12&#xa;&#xa;- Fixed twist speed slider in applets.&#xa;&#xa;&#xa;Changes in Version 2.0alpha112  2010-02-09&#xa;&#xa;- Resource files for the applets can now be zip-compressed.&#xa;- HTML export now only exports applets if they are needed.&#xa;- HTML export does not mark the document as changed anymore after export is finished.&#xa;&#xa;&#xa;Changes in Version 2.0alpha111  2010-01-30&#xa;&#xa;- Completed the color scheme of the Arxon Cuboctahedron.&#xa;   The scheme was contributed by Roger Meier.&#xa;&#xa;- The action &quot;Generate Cube&quot; did not work.&#xa;&#xa;- Adjusted the light source intensity and the ambient light intensity of the &quot;flat&quot; cube player applet.&#xa;&#xa;&#xa;Changes in Version 2.0alpha106  2010-01-10&#xa;&#xa;- Menu items in the &quot;Edit&quot; menu work now.&#xa;&#xa;&#xa;Changes in Version 2.0alpha105  2010-01-01&#xa;&#xa;- Loading of files did not work - oops :-(&#xa;- Changing a color in the cube editor did not immediately update the cube.&#xa;- Adding an additional color to an applet caused one complete face to take this color.&#xa;&#xa;&#xa;Changes in Version 2.0alpha104  2009-12-29&#xa;&#xa;- The properties panel of the Cube view did not display on Windows.&#xa;- Saving a file using the &quot;Save&quot; menu did not work.&#xa;&#xa;&#xa;Changes in Version 2.0alpha102  2009-12-22&#xa;&#xa;- Fixed a deadlock which occured when exporting a script as a video.&#xa;&#xa;&#xa;Changes in Version 2.0alpha100  2009-12-21&#xa;&#xa;- Improved the user interface on Windows.&#xa;&#xa;&#xa;Changes in Version 2.0alpha83 2009-04-13&#xa;&#xa;- Implemented the record function in the script editor.&#xa;- V-Cube 7: The stickers image at the bottom-right-down corner was distorted.&#xa;- Added a JavaScript API to the cube player applets.&#xa;- The virtual cube applets store now their state in a browser cookie.&#xa;&#xa;&#xa;Changes in Version 2.0alpha76 2009-01-25&#xa;&#xa;- Swipe movements at second edges of Cube7 cubes turned the wrong layer.&#xa;&#xa;&#xa;Changes in Version 2.0alpha76 2009-01-25&#xa;&#xa;- Fixed NullPointerException in HTML exporter.&#xa;- Added missing Unicode resource files.&#xa;&#xa;&#xa;Changes in Version 2.0alpha75 2009-01-25&#xa;&#xa;- Added 4^6 Sudoku Cube (aka 4x4x4x4x4x4 Sudoku Cube) design &#xa9; Ortwin Schenker.&#xa;- Swipe movements at front-down edges turned the wrong layer of some cubes.&#xa;- Comments were not recognized by the parser.&#xa;- Added a new syntax option &quot;Between&quot; to the &quot;Constructs&quot; page of the notation editor.&#xa;- Added support for &quot;preinfix&quot; and &quot;postinfix&quot; constructs to the parser.&#xa;- CubeTwister performs now Unicode NFKC normalization on identifiers and scripts. Note: Applets do not support this yet, due to program size constraints.&#xa;- CubeTwister issues now a warning if it is launched with a smaller memory maximum than 512 megabytes.&#xa;&#xa;&#xa;Changes in Version 2.0alpha74 2009-01-19&#xa;&#xa;- Implemented modifier key handling for swipe movements over 3D cube models for Windows.&#xa;- Made some minor fixes for handling of swipe movements over 3D cube models.&#xa;- Added &quot;selectedTool&quot; parameter to virtual cube applets.&#xa;- Fixed a memory issue caused by dynamic on and off switching of antialiasing.&#xa;&#xa;&#xa;Changes in Version 2.0alpha73 2009-01-14&#xa;&#xa;- Implemented modifier key handling for swipe movements over 3D cube models for Mac OS X.&#xa;- If the mouse pointer is moved over an active area of a cube, it changes into a hand.&#xa;&#xa;&#xa;Changes in Version 2.0alpha72 2009-01-06&#xa;&#xa;- JavaScript API: Added the following public methods to the rubik player applets: play(), pause(), isPlaying():boolean, reset(), resetCube(), setCurrentPosition(int), getCurrentPosition():int, getStartPosition():int, getEndPosition(), setScript(String), getScript():String.&#xa;&#xa;&#xa;Changes in Version 2.0alpha71 2009-01-05&#xa;&#xa;- All cubes except the DiamondCube with the Idx3d-engine can now be fully twisted by dragging the mouse pointer over the stickers. &#xa;- Removed players with Geom3D engine from CubeTwister HTML template to reduce the overall download size. These applets are currently not used by CubeTwister alpha.&#xa;&#xa;&#xa;Changes in Version 2.0alpha70 2009-01-03&#xa;&#xa;- The player applets are now localized in English, German, French and Italian.&#xa;- Cubes can now be twisted by dragging the mouse pointer over the stickers. For now, this only works for CubeTwister and for applets with the Idx3d-engine.  It is not fully implemented yet for the Diamond cube and it is not implemente yet for the &quot;flat&quot; Geom3D-engine.  &#xa;&#xa;&#xa;Changes in Version 2.0alpha69 2008-12-30&#xa;&#xa;- Fixed parameter &quot;faceList&quot; in cube player applets.&#xa;- Added parameters &quot;showResetButton&quot;, &quot;showScrambleButton&quot; and &quot;showSettingsButton&quot; to cube player applets.&#xa;&#xa;&#xa;Changes in Version 2.0alpha68 2008-12-26&#xa;&#xa;- .jar-files in HTML templates are now generated from the .jar.pack.gz files to reduce download size.&#xa;- Barrel-, Diamond- and Octahedron-Player applets did not work.&#xa;- Fixed an issue with drag and drop in the tree.&#xa;&#xa;&#xa;Changes in Version 2.0alpha67 2008-12-22&#xa;&#xa;- Compressed HTML templates as .tar.bz instead of .zip to reduce download size.&#xa;- Enforce English locale.&#xa;&#xa;&#xa;Changes in Version 2.0alpha66, 2008-12-21&#xa;&#xa;- Fixed T3L and T3L2 moves in Superset ENG 5x5 notation.&#xa;- Help window did not open when CubeTwister was launched as Java WebStart application.&#xa;- Reworked template document. &#xa;- The script type &quot;Solver&quot;/&quot;Generator&quot; is not ignored anymore when loading an CubeTwister document.&#xa;- The cube player apples did not apply the deprecated &quot;colorTable&quot; parameter to all faces of the cube.&#xa;&#xa;&#xa;Changes in Version 2.0alpha65, 2008-12-19&#xa;&#xa;- Fixed the texture mapping of the right-down edges on the 4x4 Revenge Cube, 6x6 Cube and 6x6 V-Cube.&#xa;- Fixed the texture of the Permutation Cube 4x4.&#xa;&#xa;&#xa;Changes in Version 2.0alpha64, 2008-11-24&#xa;&#xa;- The old help text from CubeTwister 1.0 is now availble in the help menu.&#xa;- The help text is now searchable.&#xa;&#xa;&#xa;Changes in Version 2.0alpha63, 2008-09-17&#xa;&#xa;- Added a rear view of the cube to the script editor and the player applets.&#xa;- Added flat versions of the cube players for V-Cube 6 and V-Cube 7.&#xa;- The flat versions of the players disable antialiasing while performing an animation on slow computers.&#xa;&#xa;&#xa;Changes in Version 2.0alpha59, 2008-09-03&#xa;&#xa;- Implemented parsing and output of permutations with different locations of sign.&#xa;- Implemented default output of the cube state, if the current notation doesn&apos;t support permutation&#xa;- Added WCA notation to template document&#xa;- Added a white V-Cube 7 to the template document.&#xa;- Fixed HTML export for V-Cube 6 and V-Cube 7.&#xa;- Added VirtualCube6 and VirtualCube7 applets.&#xa;&#xa;&#xa;Changes in Version 2.0alpha58, 2008-08-30&#xa;&#xa;- Added Cube 6 and Cube 7 with square parts.&#xa;&#xa;&#xa;Changes in Version 2.0alpha57, 2008-08-25&#xa;&#xa;- The V-Cube 6 has bigger edge and corner parts like the real cube.&#xa;- The V-Cube 7 has curved faces like the real cube.&#xa;- Fixed wrong orientation of side parts in one of the twists for V-Cube 7.&#xa;&#xa;&#xa;Changes in Version 2.0alpha53, 2008-08-25&#xa;&#xa;- Fixed counting of block moves in the cube player applets.&#xa;&#xa;&#xa;Changes in Version 2.0alpha52, 2008-08-23&#xa;&#xa;- Fixed flickering in cube animations.&#xa;- Fixed counting of block moves in V-Cube 6 and V-Cube 7.&#xa;&#xa;&#xa;Changes in Version 2.0alpha51, 2008-08-20&#xa;&#xa;- CubeTwister supports now Rubik&apos;s Cubes with 6 and 7 layers, such as V-Cube 6 and V-Cube 7.&#xa;&#xa;&#xa;Changes in Version 2.0alpha48, 2008-08-12&#xa;&#xa;- Scripts can now be exported as AVI videos as well.&#xa;&#xa;&#xa;Changes in Version 2.0alpha46, 2008-06-22&#xa;&#xa;- Export as video using the QuickTime format only worked on Mac OS X.&#xa;&#xa;&#xa;Changes in Version 2.0alpha45, 2008-06-20&#xa;&#xa;- Added &quot;Export as Video&quot; action to the script editor.</Body>
+    <Author>Werner Randelshofer</Author>
+    <Date>February 2010</Date>
+  </Text>
+</CubeMarkup>

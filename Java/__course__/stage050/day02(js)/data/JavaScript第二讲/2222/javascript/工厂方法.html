@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 工厂方法:解决对象创建代码重用的问题，解决大量对象实例化的问题
+			 * 存在:对象识别的问题
+			 * @param {Object} name
+			 * @param {Object} age
+			 */
+			function Person(name,age){
+				var obj=new Object();  //显示创建对象;
+				obj.name=name;
+				obj.age=age;
+				obj.eat=function(){
+					alert(this.name+"吃东东");
+				}
+				return obj;       //返回对象
+			}
+			
+			var p1=Person('容儿',22);     //方法调用
+			alert(p1.name);
+			var p2=Person('祖儿',23);
+			alert(p2.name);
+			
+			
+			//存在对象的识别的问题(任意对象都是Object对象，无法区别具体的对象)
+			alert(typeof(p1));
+			alert(typeof(p1));
+			alert(p1 instanceof Object);   //true
+			
+			
+	   </script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .class1{
+            color: red;
+        }
+    </style>
+    <script type="text/javascript" src="script/jquery-2.1.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //一次设置一个属性
+            $("#p1").attr("name","charles");
+            //一次设置多个属性
+            $("#p1").attr({"age":18,"address":"上海市黄浦区"});
+           //根据属性的名称 删除属性
+            $("#p1").removeAttr("address");
+            //扩展一下
+           /* $("#p1").attr("class","class1");*/
+           //设置单个css属性
+           // $("#p1").css("color","hotpink");
+            //设置多个css样式
+            $("#p1").css({"color":"green","font-size":"30px"});
+            //$("#p1").attr("style","color:hotpink")
+        });
+    </script>
+</head>
+<body>
+    <p id="p1" >属性设置中请耐心等待。。。。。。</p>
+</body>
+</html>

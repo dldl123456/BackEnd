@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				var div=document.getElementById('box');
+				alert(div);
+				alert(div.ownerDocument); //ownerDocument属性，不是一个对象;返回一个document对象;
+				alert(div.ownerDocument===document);  //比较二个对象完全相等.
+			    var aA=document.getElementsByTagName('a'); //获取所有a链接元素
+			    for(var i=0;i<aA.length;i++){
+			    	aA[i].onclick=function(){
+			    		this.parentNode.style.display='none';
+			    	}
+			    }
+			    
+			    
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box">111</div>
+		 <ul>
+		 	<li>aaaaaa <a href="javascript:;">隐藏</a></li>
+		 	<li>bbbbbb <a href="javascript:;">隐藏</a></li>
+		 	<li>cccccc <a href="javascript:;">隐藏</a></li>
+		 	<li>dddddd <a href="javascript:;">隐藏</a></li>
+		 	<li>eeeeee <a href="javascript:;">隐藏</a></li>
+		 	
+		 </ul>
+	</body>
+</html>

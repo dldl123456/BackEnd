@@ -1,0 +1,53 @@
+问题1：jdk和jre的区别？
+    jre:
+    java-runtime-enviroment——java运行环境
+    所有java程序都要在jre上才能运行。他包括了jvm和java核心类库等
+  	jvm--java-virtual-machine  java虚拟机
+  	java虚拟机实现跨平台——
+  		Java虚拟机屏蔽了与具体操作系统平台相关的信息，使得Java程序只需生成在Java虚拟机上运行的目标代码（字节码		），就可以在多种平台上不加修改地运行。
+
+    jdk:
+    java-development-kit——java开发工具包
+    java工具包是整个java的核心。
+    他包括了java运行环境、java开发工具和java基础类库
+  	另：java运行环境是 jre——java-runtime-enviroment
+  	    java开发工具是 java、javac、javadoc
+  
+问题2：有哪些数据类型？
+    基本数据类型（8）
+      布尔类型（boolean）
+      字符类型（char）
+      数值类型
+        整数类型
+          byte、short、int、long
+        浮点类型
+          float、double
+    引用数据类型（n）
+      类（class）、接口（interfase）、数组、空（null）、字符串（String）……
+
+问题3：do while和while和for有哪些区别？
+  while：循环次数不确定，先判断再循环
+  do-while：循环次数不确定，先循环在判断（哪怕条件不成立，也会执行一次）
+  for：循环次数确定
+
+问题4：运算符有哪几大类？
+  关系运算符：>  <  >=  <=  ==  !=
+  逻辑运算符：& &&  | ||  ! 
+  赋值运算符：=  +=  -=  *=  /=  %=
+  位运算符: & (位与)   |(位或) ！(位取反)   ^(位异或)  ~(取反)
+  算数运算符：+  -  *  /  %  ++  --
+
+
+问题5：if和switch有哪些区别？
+  switch建议判断固定值的时候用
+  if建议判断区间或范围的时候用
+  有很多else if的时候，用switch case比较清晰
+  编译器编译switch与编译if...else...不同。不管有多少case，都直接跳转，不需逐个比较查询；switch只计算一次值
+
+
+问题6：可以用switch表现的数据类型有哪些？
+  switch能使用的数据类型有6种：
+    byte、short、char、int、String、枚举
+
+
+break是结束整个循环，而continue是结束本次循环（跳过下一步）

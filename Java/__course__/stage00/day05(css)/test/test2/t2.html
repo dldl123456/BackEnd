@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+<title>t1</title>
+<style>
+	body{
+		background: #efefef;
+	}
+
+	dt{
+		color: #fe8135;
+	}
+
+	dd{
+		margin: 0;
+		position: relative;
+		color: #ccc;
+	}
+
+	dd:before{
+	    content: ' ';
+	    width: 5px;
+	    height: 5px;
+	    background: #ccc;
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    border-radius: 5px;
+	    left: -16px;
+	}
+</style>
+</head>
+
+<body>
+<!-- body s -->
+	<ul>
+		<li>
+			<dl>
+				<dt>家用电器</dt>
+				<dd>大家电</dd>
+			</dl>
+		</li>
+
+		<li>
+			<dl>
+				<dt>日用百货</dt>
+				<dd>肥皂</dd>
+			</dl>
+		</li>
+	</ul>
+<!-- body e -->
+</body>
+</html>

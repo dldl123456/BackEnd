@@ -1,0 +1,106 @@
+//创建数据库 day04
+CREATE DATABASE day04;
+//删除数据库day04
+DROP DATABASE day04;
+//设置当前操作的数据库day04
+USE day04;
+
+//创建学生表格student
+id 主键 自增   INT
+stuNo 唯一     VARCHAR
+stuName 非空   VARCHAR
+stuPass 非空   VARCHAR
+
+//CREATE TABLE  表格名称
+//(列1 列1对应的数据类型 列1约束类型)
+//AUTO_INCREMENT标志着自增的意思，一般跟主键结合使用
+
+CREATE TABLE student(
+id INT PRIMARY KEY AUTO_INCREMENT,
+stuNo VARCHAR(50) UNIQUE NOT NULL,
+stuName VARCHAR(30) NOT NULL,
+stuPass VARCHAR(30) NOT NULL
+);
+
+//往表格中插入数据 
+//备注:设置自动增长列的主键不需要人为插入数据
+//字段与值是一一对应的关系
+INSERT INTO student(stuNo,stuName,stuPass)
+VALUES('001','王小二','123');
+
+INSERT INTO student(stuNo,stuName,stuPass)
+VALUES('002','王小三','123');
+
+INSERT INTO student(stuNo,stuName,stuPass)
+VALUES('003','王小四','123');
+
+INSERT INTO student(stuNo,stuName,stuPass)
+VALUES('004','王小wu','123');
+INSERT INTO student(stuNo,stuName,stuPass)
+VALUES('005','王小liu','123');
+INSERT INTO student(stuNo,stuName,stuPass)
+VALUES('006','王小qi','123');
+
+
+//修改数据 根据指定的条件修改数据
+WHERE:根据什么条件进行操作(修改数据，删除数据，查询数据)
+
+UPDATE student 
+SET stuName='王小三三',stuPass='1234'
+WHERE id=2;
+
+WHERE id>1 AND stuName='王小四'  
+2个条件必须同时成立才可以进行(修改数据，删除数据，查询数据)
+OR
+左右2边至少有一个条件成立才可以进行(修改数据，删除数据，查询数据)
+举例子说明 id=1或者3或者2进行操作
+
+WHERE id=1 OR id=3 OR id=2;
+
+
+IN
+id=1或者2或者3进行操作
+WHERE id IN(1,2,3);
+
+
+//删除操作
+
+DELETE FROM student
+WHERE id=2 OR id=3;
+
+DELETE FROM student 
+WHERE id IN(5,6);
+
+//查询
+
+//查询所有  * 代表所有的列进行查询
+
+SELECT * FROM student;
+
+//查询指定列
+SELECT stuName,stuNo FROM student;
+
+//根据指定的条件进行查询
+SELECT * FROM student WHERE id=1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

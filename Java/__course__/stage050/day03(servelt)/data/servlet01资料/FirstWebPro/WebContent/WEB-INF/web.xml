@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FirstWebPro</display-name>
+  <welcome-file-list>
+  	<!--加载web容器时默认打开的首页文件-->
+    <welcome-file>test.html</welcome-file>
+  </welcome-file-list>
+  <!--配置servlet-->
+  
+  <!--
+  	servlet-class:对应后端servlet的全限定类名 (包名.类名)
+  	url-pattern:配置路径模板  前段通过此路径模板访问对应的servlet
+  	
+  	myServlet次路径模板每访问一次此方法就会被调用一次
+  -->
+  <servlet>
+  	<servlet-name>myServlet1</servlet-name>
+  	<servlet-class>com.itzzb.servlet.MyServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>myServlet1</servlet-name>
+  	<url-pattern>/myServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>lifeServlet</servlet-name>
+  	<servlet-class>com.itzzb.life.LifeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>lifeServlet</servlet-name>
+  	<url-pattern>/lifeServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        temp=123;//隐士定义
+        alert(temp);
+        var temp1=123;//显示定义(建议使用)
+        //数据类型的简单介绍
+        var num1=123;
+        var num2=123.456789;
+        var th=null;
+        var str1="123";
+        document.write(typeof(num1)+"<br>");
+        document.write(typeof(num2)+"<br>");
+        document.write(typeof(th)+"<br>");
+        document.write(typeof(str1)+"<br>");
+        //数值类型转换成字符串类型
+        var num_str=1234566789;
+        //var str=""+num_str;
+        //var str=num_str+"";
+        var str=num_str.toString();
+        alert(typeof(str));
+        //字符串类型转换成数值类型
+        var str_num1="123";
+        var number1=parseInt(str_num1);//"123"-----123
+        var str_num2="123.456";
+        var number2=parseFloat(str_num2);//"123.456"-----123.456
+        //浮点数取整  parseInt(float)取float的整数部分
+        var number3=123.999999;
+        var num=parseInt(number3);//123
+    </script>
+</head>
+<body>
+</body>
+</html>
