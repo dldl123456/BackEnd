@@ -7,7 +7,6 @@
  * 密码确认 ==> 密码不能含有非法字符，长度在4-10之间
  */
 
-//应用代码，立即执行函数
 !function(){
 	let $ = util.$;
 	
@@ -46,10 +45,43 @@
 	//load
 	document.addEventListener('DOMContentLoaded', function(e){
 		let usernameReg = /^[\w]{6,12}$/g,	//用户名长度为6-16位
-			telphoneReg = /^1[358][0-9]{9}$/g;	//11位有效手机号码
+			EmailReg = /^[^\_][\w\-\.]+@[\w\.]+[\w]{2,3}$/;  //web@suhu.com
+			telphoneReg = /^1[358][0-9]{9}$/g,	//11位有效手机号码
+			passwordReg = /[^@#\$%\^&\*]{4,10}$/g;  //非法字符
 
 		//验证
-		checkForm(usernameReg, $('#username'), "用户名长度为6-16位", "用户名正确");
-		checkForm(telphoneReg, $('#telphone'), "手机号码不正确", "手机号码正确");
+		checkForm(usernameReg, $('#username'), "用户名长度为6-16位", "用户名输入正确");
+		checkForm(EmailReg, $('#Email'), "邮箱格式错误", "邮箱输入正确");
+		checkForm(telphoneReg, $('#telphone'), "手机号码不正确", "手机号码输入正确");
+		checkForm(passwordReg, $('#password'), "密码不正确", "密码输入正确");
+
+		$('#r-password').onblur = function(){
+			var wrapNode = this.parentNode;  //父节点
+			var nextNode = this.nextSibling.nextElementSibling;  //下一个兄弟节点
+
+			function succ(txt){
+				removeClass(wrapNode, 'error');
+				addClass(wrapNode, 'success');
+				nextNode.innerHTML = txt;
+			}
+
+			function err(txt){
+				removeClass(wrapNode, 'success');
+				addClass(wrapNode, 'error');
+				nextNode.innerHTML = txt;
+			}
+
+			if(this.value == ""){
+				err("输入不能为空");
+			}
+			
+			if(this.value != $('#password').value){
+				err("两次密码输入不一致");
+			}
+
+			if((this.value != "") && (this.value == $('#password').value)){
+				succ("密码验证通过");
+			}
+		}
 	});
 }();
