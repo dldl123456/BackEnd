@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			.box{
+				border:1px solid red;
+				width:200px;
+				height: 300px;
+			}
+			
+			
+		</style>
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var div=document.getElementById("mydiv");
+				//alert(div.className);  //className获取class属性
+				//div.className='box';
+				
+				//div.style.backgroundColor='red';
+				//获取所有的元素标签
+				var allObject=document.getElementsByTagName("*");
+				for(var i=0;i<allObject.length;i++){
+					alert(allObject[i].tagName);
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		 <div id="mydiv">mydiv</div>
+	</body>
+</html>

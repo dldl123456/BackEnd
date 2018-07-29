@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			window.onload=function(){
+		    //脚本模型
+			var btn=document.getElementById('btn');
+			  btn.onclick=function(){
+				alert('点我吧!');
+			  }
+			  
+			 var city=document.getElementById('city');
+			 city.onchange=function(){
+			 	alert('改变值');
+			 }
+			  
+			}
+		</script>
+	</head>
+	<body>
+		 <!--
+         	作者：25952312@qq.com
+         	时间：2018-07-27
+         	描述：内联脚本
+         -->
+		 <input type="button" value="点我吧" id="btn" onclick="alert('xxx');" /> 
+		 
+		 <select id="city">
+		 	<option value="AAA">aaa</option>
+		 	<option value="BBB">bbb</option>
+		 	<option value="CCC">ccc</option>
+		 	<option value="DDD">ddd</option>
+		 </select>
+	</body>
+</html>

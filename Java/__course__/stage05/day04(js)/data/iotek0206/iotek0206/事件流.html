@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				document.body.onclick=function(){
+					alert('body');
+				}
+				var div=document.getElementById('box');
+				div.onclick=function(evt){
+					alert('div');
+					evt.stopPropagation();  //阻止冒泡行为.
+				}
+				var btn=document.getElementById('bt');
+				btn.onclick=function(evt){
+					alert('btn');
+					evt.stopPropagation();
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="box">
+			<input type="button" id="bt" value="点我吧"/>
+			
+		</div>
+		
+	</body>
+</html>

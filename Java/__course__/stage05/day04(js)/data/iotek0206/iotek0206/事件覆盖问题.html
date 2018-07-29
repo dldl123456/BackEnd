@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			window.onload=function(){
+				alert('容儿');
+			}
+			
+			window.onload=function(){
+				alert('祖儿');
+			}
+			*/
+			//解决上面的冲突的问题，
+			window.addEventListener('load', function () {
+	         alert('张三');
+              }, false);
+
+             window.addEventListener('load', function () {
+	        alert('Mr.张三');
+             }, false);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

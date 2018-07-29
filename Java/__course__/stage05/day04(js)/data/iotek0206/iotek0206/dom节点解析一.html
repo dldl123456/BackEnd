@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var box=document.getElementById('box');
+				/*
+				alert(box.nodeName);  //div
+				alert(box.nodeType);  //1
+				alert(box.nodeValue); //null
+				*/
+				var nodes=box.childNodes;//获取div所有的子节点
+				alert(nodes.length+"**");
+				for(var i=0;i<nodes.length;i++){
+					if(nodes[i].nodeType==3)
+					alert(nodes[i].nodeValue);
+					else
+					alert(nodes[i].nodeName);
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box"><span>xx</span>mydiv</div>
+	</body>
+</html>

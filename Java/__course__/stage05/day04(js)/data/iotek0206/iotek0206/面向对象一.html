@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//自定义对象类型Object 类型
+			var student=new Object();  //自定义对象;
+			
+			student.name='容儿';   //设置属性
+			student.age=22;
+			student.eat=function(){
+				alert(this.name+"  吃东东");   //本类对象//当前对象;
+			}
+			
+			//测试
+			alert(student.name);
+			student.eat();
+			
+			
+			var student2=new Object();  //自定义对象;
+			
+			student2.name='小花';   //设置属性
+			student2.age=22;
+			student2.eat=function(){
+				alert(this.name+"  吃东东");   //本类对象//当前对象;
+			}
+			
+			//测试
+			alert(student2.name);
+			student2.eat();
+			
+			
+			//产生大量的重复代码
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:200px;
+				height: 200px;
+				background-color: red;
+				position:absolute;
+				left:0;
+		        top:50px;
+			}
+			</style>
+			<script>
+				var time=null;
+				window.onload=function(){
+					var div=document.getElementById('box');
+					var btn=document.getElementById('btn');
+					btn.onclick=function(){
+						
+						time=setInterval(function(){
+							var speed=1;
+							if(div.offsetLeft>=300){
+								clearInterval(time);
+							}else{
+								div.style.left=div.offsetLeft+speed+'px';
+							}
+							
+						},30);
+					}
+					
+					
+				}
+				
+				
+			</script>
+	</head>
+	
+	<body>
+		<input type="button" id="btn" value="开始运动">
+		<div id="box"></div>
+		
+	</body>
+</html>

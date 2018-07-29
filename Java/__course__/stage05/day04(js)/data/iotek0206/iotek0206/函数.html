@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function show(){
+				alert('你好吗？');
+			}
+			
+			show();
+			//有返回值，必须使用return 返回内容;
+			function add(x,y){    //形参列表x ,y
+				return x+y;
+			}
+			//调用函数
+			var rs=add(10,20);  //return 返回函数的调用处.
+			alert(rs);
+		</script>
+	</head>
+	<body>
+		<input type="button" value="问话" onclick="show();"/>
+	</body>
+</html>

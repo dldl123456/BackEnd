@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+
+				var uL=document.getElementById('uu');
+			    var aA=document.getElementsByTagName('a'); //获取所有a链接元素
+			    for(var i=0;i<aA.length;i++){
+			    	aA[i].onclick=function(){
+			    		uL.removeChild(this.parentNode);
+			    	}
+			    }
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box">111</div>
+		 <ul id="uu">
+		 	<li>aaaaaa <a href="javascript:;">删除</a></li>
+		 	<li>bbbbbb <a href="javascript:;">删除</a></li>
+		 	<li>cccccc <a href="javascript:;">删除</a></li>
+		 	<li>dddddd <a href="javascript:;">删除</a></li>
+		 	<li>eeeeee <a href="javascript:;">删除</a></li>
+		 	
+		 </ul>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			window.onload=function(){
+				alert('aaa');
+			}
+			
+			window.onload=function(){
+				alert('bbb');
+			}
+			*/
+			/*
+			window.onresize=function(){
+				alert('改变窗口的大小');
+			}
+			*/
+			//普通函数里的参数默认值是0，没有参数
+			//arguments存储参数的对象
+			/*
+			function show(x,y){
+				alert(arguments.length);
+			}
+			show(10,20);
+			*/
+			
+			
+			window.onload=function(){
+				var bt=document.getElementById('bt');
+				//对象绑定的事件函数
+				//隐藏事件对象event//MouseEvent
+				//bt事件源 
+				/*
+				bt.onclick=function(event){
+					//alert(arguments.length);   //没有参数，为什么长度等于1？
+					//alert(arguments[0]);
+					alert(event);
+				}
+				*/
+				
+				/*
+				document.onmousedown=function(evt){
+					//alert('xxx');
+					if(evt.button==0){
+						alert('左键');
+					}else if(evt.button==1){
+						alert('中键');
+					}else{
+						alert('右键');
+					}
+				}
+				*/
+				document.onmousedown=function(evt){
+					alert(evt.clientX);
+					alert(evt.screenX);
+				}
+				
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		 <input type="button" value="xxx" id="bt" />
+	</body>
+</html>

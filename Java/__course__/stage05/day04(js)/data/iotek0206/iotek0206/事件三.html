@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:200px;
+				height:200px;
+				background-color: red;
+				position: absolute;
+			}
+			
+		</style>
+		<script>
+			window.onload=function(){
+			document.onmousemove=function(evt){
+				var div=document.getElementById('box');
+				div.style.left=evt.clientX+'px';
+				div.style.top=evt.clientY+'px';
+			    }
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="box"></div>
+	</body>
+</html>

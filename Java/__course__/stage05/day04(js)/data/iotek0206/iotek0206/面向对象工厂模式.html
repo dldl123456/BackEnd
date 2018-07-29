@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/**
+			 * 工厂方法创建对象，解决大量重复代码问题，,存在对象识别的问题，
+			 * @param {Object} name
+			 * @param {Object} age
+			 */
+			function Student(name,age){
+				var obj=new Object();
+				obj.name=name;
+				obj.age=age;
+				obj.eat=function(){
+					alert(this.name+" 吃东东");
+				}
+				return obj;
+			}
+			var stu1=Student('美君',22);
+			
+			alert(stu1.name);
+			stu1.eat();
+			
+			var stu2=Student('小白',23);
+			stu2.eat();
+			 //DOG
+			alert(typeof stu1 );  //Object 
+			 
+			alert(stu1 instanceof Object); //true
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

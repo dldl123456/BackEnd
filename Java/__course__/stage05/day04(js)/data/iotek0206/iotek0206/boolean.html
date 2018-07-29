@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var f=new Boolean();  //对象
+			f=true;
+			alert(typeof f);
+			
+			var f2=new Boolean(true);
+			alert(typeof(f2.toString()));  //string类型
+			
+			
+			//Number
+			var num=new Number(100);
+			alert(num);
+			var z='a';
+			if(isNaN(z)){     //isNaN 判断是否NaN(不是数值) 是数值返回false
+				alert('xxx');
+			}
+			else{
+				alert('yyyy');
+			}
+			
+			var x=Number.MAX_VALUE;
+			alert(x);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

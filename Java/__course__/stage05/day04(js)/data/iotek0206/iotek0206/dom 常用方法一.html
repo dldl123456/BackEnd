@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//window.onload事件表示dom加载完毕
+			window.onload=function(){
+				/*
+			    var div=document.getElementById("box1");
+			    alert(div.tagName);
+			    alert(div.innerHTML);
+			    */
+			    //返回数组对象
+			    /*
+			    var divs=document.getElementsByTagName('div');
+			    alert(divs.length);
+			    for(var i=0;i<divs.length;i++){
+			    	alert(divs[i].innerHTML);
+			    }
+			    */
+			  
+			   
+			   //对象绑定事件
+			   //获取button
+			   /*
+			   var  btn=document.getElementById("btn")
+			   btn.onclick=function(){
+			   	    var chks=document.getElementsByName("loves");
+			        alert(chks.length);
+			        for(var i=0;i<chks.length;i++)
+			        {
+			   	      chks[i].checked=true;
+			        }
+			   }
+			   */
+			  
+			  //属性的操作
+			  
+			  var box=document.getElementById('box1');
+			  alert(box.getAttribute('id'));
+			  alert(box.getAttribute('sdf')); //sdf属性并不是div的标准属性;同样可以获取到
+			  box.setAttribute("id","mydiv");
+			  box.removeAttribute("sdf");
+			  
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1" sdf="myids">mydiv1</div>
+		<div id="box2">mydiv2</div>
+		<input type="checkbox" name="loves" value="net"/>网络
+		<input type="checkbox" name="loves" value="music"/>音乐
+		<input type="checkbox" name="loves" value="sports"/>运动
+		<input type="button" id="btn" value="全选">
+	</body>
+</html>
