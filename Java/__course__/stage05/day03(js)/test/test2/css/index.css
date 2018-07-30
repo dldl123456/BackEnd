@@ -1,0 +1,47 @@
+/* ==========================================================================
+  box
+============================================================================ */
+.box{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  background: #efefef;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.box table{
+  
+}
+
+.box td{
+  width: 100px;
+  height: 30px;
+  padding: 6px;
+  text-align: center;
+  border: solid 1px #ccc;
+}
+
+.box button{
+  padding: 7px;
+  color: #636363;
+  background: #ccc;
+  border-radius: 3px;
+  transition: 0.2s linear;
+}
+
+.box button:hover{
+  color: #fff;
+  background: #60bb50;
+  transition: 0.2s linear;
+}
+
+.box input[type='text']{
+    width: 60%;
+    padding: 3px;
+    border-radius: 3px;
+}

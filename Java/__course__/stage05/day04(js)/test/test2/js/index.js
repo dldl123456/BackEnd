@@ -7,3 +7,15 @@
  *6.爱好：请默认选中逛街
  *7：注册按钮点击事件  显示当前输入的所有信息（7提示信息弹出框显示）
  */
+
+!function(){
+	let $ = util.$;
+	
+	let addClass = util.addClass;
+	let removeClass = util.removeClass;
+
+	//load
+	document.addEventListener('DOMContentLoaded', function(e){
+
+	});
+}();

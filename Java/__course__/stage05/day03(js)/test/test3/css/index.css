@@ -1,0 +1,106 @@
+/* ==========================================================================
+  layout
+============================================================================ */
+/* flex_ul */
+.flex_list{display:flex;}
+.flex_list li, .flex_list dd{flex:1;text-align: center;}
+
+/* inln_ul */
+.inln_ul{font-size: 0}
+.inln_ul li{display: inline-block;}
+
+
+
+/* ==========================================================================
+  box
+============================================================================ */
+.box{
+  width: 80%;
+  min-height: 20%;
+  max-height: 80%;
+  padding: 10px;
+  background: #efefef;
+}
+
+.box label{
+  cursor: pointer;
+}
+
+.box button{
+  padding: 7px;
+  color: #636363;
+  background: #ccc;
+  border-radius: 3px;
+  transition: 0.2s linear;
+}
+
+.box button:hover{
+  color: #fff;
+  background: #60bb50;
+  transition: 0.2s linear;
+}
+
+.cont{
+  margin-top: 16px;
+}
+
+.cot_t li{
+  font: bold 16px arial;
+}
+
+.cot_t, .cot_b {
+  border-bottom: 1px #ccc dashed;
+  padding-bottom: 16px;
+}
+
+.cot_b{
+  margin: 18px 0;
+}
+
+.cot_b .pudlist:not(:last-child){
+  margin-bottom: 18px;
+}
+
+.cot_b li{
+  position: relative;
+  min-height: 100px;
+}
+
+.cot_b li > *:not(:nth-child(2)){
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.cot_b dl{
+  display: flex;
+
+}
+
+.cot_b dd{
+  width: 25px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+
+.cot_b .reduce, .cot_b .plus{
+  background: #ccc;
+  cursor: pointer;
+}
+
+.cot_b .reduce{
+  border-right: solid 1px #ccc;
+}
+
+.cot_b .plus{
+    border-left: solid 1px #ccc;
+}
+
+.botm li{
+  margin-right: 20px;
+}
