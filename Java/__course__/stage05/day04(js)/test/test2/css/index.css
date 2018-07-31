@@ -1,0 +1,83 @@
+/* ==========================================================================
+  box
+============================================================================ */
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  background: #efefef;
+  border-radius: 8px;
+}
+
+.box li{
+  margin-bottom: 16px;
+}
+
+.box dt, .box dd{
+  display: inline-block;
+}
+
+.box dt{
+    min-width: 50px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.box dd input{
+  outline: none; 
+  background: #fff; 
+  padding: 5px;
+  border-radius: 3px;
+  transition: 0.2s linear;
+}
+
+.box dd input + span.info{
+  display: inherit;
+  min-width: 60px;
+  margin-left: 8px;
+}
+
+.box dd.error input{
+  border-color: #f00;
+}
+
+.box dd.error input + span.info{
+  color: #f00;
+}
+
+.box dd.success input{
+  border-color: #499c2f;
+}
+
+.box dd.success input + span.info{
+  color: #499c2f;
+}
+
+.box dd input:hover{
+  border-color: #676262;
+  transition: 0.3s linear;
+}
+
+.box label{
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.box_btn button{
+  padding: 7px;
+  color: #636363;
+  background: #ccc;
+  border-radius: 3px;
+  transition: 0.2s linear;
+}
+
+.box_btn button:hover{
+  color: #fff;
+  background: #60bb50;
+  transition: 0.2s linear;
+}

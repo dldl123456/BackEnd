@@ -1,0 +1,68 @@
+/* ==========================================================================
+  layout
+============================================================================ */
+/* flex_ul */
+.flex_list{display:flex;}
+.flex_list li, .flex_list dd{flex:1;text-align: center;}
+
+/* inln_list */
+.inln_list{font-size: 0}
+.inln_list li, .inln_list dd{display: inline-block;font-size: 12px}
+
+
+/* ==========================================================================
+  box
+============================================================================ */
+.box{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  background: #efefef;
+  border-radius: 8px;
+}
+
+.time_cont {
+  width: 60%;
+  margin: 30px auto 0;
+}
+
+.time_wrap{
+    display: block;
+    width: 60%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto 18px;
+    background: rgba(72, 72, 72, 0.6);
+    border-radius: 3px;
+}
+
+.time_btn{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.time_btn li{
+  margin-right: 10px;
+  text-align: center;
+}
+
+.time_btn button{
+  padding: 7px;
+  color: #636363;
+  background: #ccc;
+  border-radius: 3px;
+  transition: 0.2s linear;
+}
+
+.time_btn button:hover{
+  color: #fff;
+  background: #60bb50;
+  transition: 0.2s linear;
+}

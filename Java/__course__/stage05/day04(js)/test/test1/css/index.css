@@ -1,0 +1,77 @@
+/* ==========================================================================
+  layout
+============================================================================ */
+/* flex_ul */
+.flex_list{display:flex;}
+.flex_list li, .flex_list dd{flex:1;text-align: center;}
+
+/* inln_list */
+.inln_list{font-size: 0}
+.inln_list li, .inln_list dd{display: inline-block;font-size: 12px}
+
+
+/* ==========================================================================
+  box
+============================================================================ */
+.box{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  background: #efefef;
+  border-radius: 8px;
+}
+
+.box li{
+  margin-bottom: 10px;
+}
+
+.box dl{
+  position: relative;
+}
+
+.box dd:not(:first-child){
+  margin-left: 10px;
+}
+
+.box .impo_ico{
+  top: 6px;
+  color: #f00;
+}
+
+.box input[type='text']{
+    width: 90%;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.box dd:last-child{
+  margin-left: 20px;
+  height: 11px;
+}
+
+.box .error dd:last-child{
+  color: #f00;
+}
+
+.box .error dd:last-child::before, .box .success dd:last-child::before{
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+}
+
+.box .error dd:last-child::before{
+  background: url(../images/error.png) top no-repeat;
+  background-size: 100% 100%;
+}
+
+.box .success dd:last-child::before{
+  background: url(../images/succ.png) top no-repeat;
+  background-size: 100% 100%;
+}

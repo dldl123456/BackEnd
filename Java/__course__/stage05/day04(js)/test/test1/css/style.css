@@ -42,6 +42,7 @@ input[type="text"]{border:solid 1px #ccc;}
 .f-db{display:block;}
 /* relative */
 .f-pr{position:relative;}
+.f-ps{position: absolute;}
 /* 溢出隐藏 */
 .f-oh{overflow:hidden;}
 /* font-size */
@@ -74,6 +75,14 @@ input[type="text"]{border:solid 1px #ccc;}
 .f-csm{cursor:move;}
 /* 文本不能被选择 */
 .f-usn{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+
+/* 绝对定位居中 */
+.f-ptr{position: absolute;left:50%;top:50%;transform:translate(-50%, -50%);}
+.f-pxr{position: absolute;left: 50%;transform: translateX(-50%);}
+.f-pyr{position: absolute;top: 50%;transform: translateY(-50%);}
+
+/* 边框圆角 */
+.f-bdru{border-radius: 6px;}
 
 
 /* ==========================================================================

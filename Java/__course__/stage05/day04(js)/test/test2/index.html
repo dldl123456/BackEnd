@@ -10,10 +10,80 @@
 
 <body>
 <!-- body s -->
+<div class="box">
+	<form id="userInfo">
+		<ul>
+			<li>
+				<dl>
+					<dt>用户名：</dt>
+					<dd>
+						<input type="text" name="username" id="username" placeholder="请输入用户名" />
+						<span class="info"></span>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dt>登陆密码：</dt>
+				<dd>
+					<input type="text" name="password" id="password" placeholder="请输入登陆密码" />
+					<span class="info"></span>
+				</dd>
+			</li>
+			<li>
+				<dt>密码确认：</dt>
+				<dd>
+					<input type="text" name="r-password" id="r-password" placeholder="请输入确认密码" />
+					<span class="info"></span>
+				</dd>
+			</li>
+			<li>
+				<dt>性别：</dt>
+				<dd>
+					<label class="f-cb" for="man">
+						<input id="man" name="man" class="f-fl" type="radio" name="sex" checked="checked" />
+						<span class="f-fl">男</span>
+					</label>
+					<label class="f-cb" for="woman">
+						<input id="woman" name="woman" class="f-fl" type="radio" name="sex" />
+						<span class="f-fl">女</span>
+					</label>
+				</dd>
+			</li>
+			<li>
+				<dt>生日(1997-01-01)：</dt>
+				<dd>
+					<input type="text" name="birth" id="birth" placeholder="请输入生日" />
+					<span class="info"></span>
+				</dd>
+			</li>
+			<li>
+				<dt>爱好：</dt>
+				<dd>
+					<label class="f-cb" for="shopping">
+						<input id="shopping" name="shopping" class="f-fl" type="checkbox" checked="checked" />
+						<span class="f-fl">逛街</span>
+					</label>
+					<label class="f-cb" for="reading">
+						<input id="reading" name="reading" class="f-fl" type="checkbox" />
+						<span class="f-fl">阅读</span>
+					</label>
+					<label class="f-cb" for="sport">
+						<input id="sport" name="sport" class="f-fl" type="checkbox" />
+						<span class="f-fl">运动</span>
+					</label>
+				</dd>
+			</li>
+		</ul>
+	</form>
 
+	<div class="box_btn">
+		<button id="userInfoBtn">注册</button>
+	</div>
+</div>
 <!-- body e -->
 
 <!-- js s -->
+<script src="js/lib/jquery1.8.3.min.js"></script>
 <script src="js/index.js"></script>
 <!-- js e -->
 </body>
