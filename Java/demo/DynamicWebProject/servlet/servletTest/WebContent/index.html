@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>servletTest</title>
+</head>
+<body>
+	<a href="test.do">输出</a>
+	<a href="config.do">ServletConfig</a>
+	<a href="sc1.do">ServletContextA</a>
+	<a href="sc2.do">ServletContextB</a>
+	<a href="count.do">访问次数</a>
+	<a href="s1.do">SessionServlet</a>
+	<form action="login.do" method="get">
+		用户名：<input type="text" name="username">
+		密码：<input type="password" name="password">
+		<input type="submit" value="登录">
+	</form>
+	<a href="out.do">中文乱码解决（输出）</a>
+	
+	<form action="charsetp.do" method="post">
+		用户名：<input type="text" name="username">
+		<input type="submit" value="post乱码">
+	</form>
+	
+	<form action="charsetg.do" method="get">
+		用户名：<input type="text" name="username">
+		<input type="submit" value="get乱码">
+	</form>
+</body>
+</html>
