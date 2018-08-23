@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		  <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+		 <script type="text/javascript">
+		 	$(function(){
+		 		/*
+		 		$('div').each(function(n){
+		 			//alert(n);
+		 			$(this).css('background','royalblue');
+		 		});
+		 		*/
+		 		/*
+		 		alert($('div').size());
+		 		alert($('div').length);
+		 		$('div').get(1).style.background='red';  //dom
+		 		$($('div').get(1)).css('background','blue'); //dom转jquery对象;
+		 		*/
+		 		$('#box').data('user','liayin'); //设值
+                // $('#box').removeData('user');
+		 		alert($('#box').data('user'));    //取值
+		 	});
+		 </script>
+	</head>
+	<body>
+		<div id="box">box1</div>
+		<div>box2</div>
+		<div>box3</div>
+	</body>
+</html>

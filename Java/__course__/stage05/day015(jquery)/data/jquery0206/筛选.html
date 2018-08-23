@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+		 <script type="text/javascript">
+		 	$(function(){
+		 	    var lis=$('ul>li');
+		 	   // lis.first().css('background','red');
+		 	    //lis[1].style.background='red';
+		 	    
+		 	   // lis.filter('[title=abc]').css('background','greenyellow');
+		 	    
+		 	    //lis.not('[title=abc]').css('background','greenyellow');
+		 	    //lis.has('span').css('background','pink');
+		 	    
+		 	    //children()子标签中找
+		 	      var ul=$('ul');
+		 	     ul.children().css('background','red');
+		 	    //ul.children('span:eq(0)').css('background','red');
+		 	    //find 后代标签中找
+		 	    //parent 父标签
+		 	    //prevAll 前面所有的兄弟标签
+		 	    //nextAll 后面所有的兄弟标签
+		 	    //siblings 前后所有的兄弟标签
+		 	});
+		 	
+		 </script>
+	</head>
+	<body>
+		<ul>
+			<span>span1</span>
+			<li>aaaa</li>
+			<li title="abc">bbbb</li>
+			<li>cccc</li>
+			<li><span>span</span>dddd</li>
+			<span>span2</span>
+		</ul>
+	</body>
+</html>

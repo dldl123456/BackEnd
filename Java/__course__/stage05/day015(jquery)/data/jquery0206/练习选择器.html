@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var loves=$(':checkbox[name=loves]');
+				var checkedAllbox=$('#checkAllBox');
+				$('#checkedAllBtn').click(function(){
+					loves.prop('checked',true);
+				});
+				$('#checkedNoBtn').click(function(){
+					loves.prop('checked',false);
+				});
+				//反选
+				$('#checkedRevBtn').click(function(){
+					loves.each(function(){
+						this.checked=!this.checked;
+					});
+					
+				});
+				//全选/全不选
+				checkedAllbox.click(function(){
+					loves.prop('checked',this.checked);
+				});
+				//提交
+				$('#sendBtn').click(function(){
+					loves.filter(':checked').each(function(){
+						alert(this.value);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		你爱好的运动是?<input type="checkbox" id="checkAllBox"/>全选/全不选
+		<br />
+		<input type="checkbox" name="loves" value="足球"/>足球
+		<input type="checkbox" name="loves" value="篮球"/>篮球
+		<input type="checkbox" name="loves" value="排球"/>排球
+		<br>
+		<input type="button" id="checkedAllBtn" value="全选" /> 
+		<input type="button" id="checkedNoBtn" value="全不选" /> 
+		<input type="button" id="checkedRevBtn" value="反选" /> 
+		<input type="button" id="sendBtn" value="提交" /> 
+	</body>
+</html>
