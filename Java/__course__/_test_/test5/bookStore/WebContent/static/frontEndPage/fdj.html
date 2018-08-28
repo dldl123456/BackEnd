@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+<link href="images/icon/favicon.ico" rel="shortcut icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+<title>当当—网上购物中心：图书、母婴、美妆、家居、数码、家电、服装、鞋包等，正品低价，货到付款</title>
+<style>
+	*{
+            margin:0px;
+            padding:0px;
+        }
+        #smallBox{
+            position:relative;
+            border:1px solid #ccc;
+            display: block;
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+        }
+        #floatBox{
+            display: none;
+            width: 160px;
+            height: 120px;
+            position: absolute;
+            background: #ffffcc;
+            border: 1px solid #ccc;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+
+        #bigBox {
+            display: none;
+            position:absolute;
+            top:50px;
+            z-index:6;
+            left: 460px;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+
+        #bigBox img{
+            position:absolute;
+        }
+</style>
+</head>
+
+<body>
+<!-- body s -->
+<div id="smallBox">
+    <div id="floatBox"></div>
+    <img title="small img" src="http://img3m0.ddimg.cn/63/31/25290900-2_w_3.jpg">
+</div>
+<div id="bigBox">
+    <img title="bigger img" src="http://img3m0.ddimg.cn/63/31/25290900-5_u_3.jpg">
+</div>
+<!-- body e -->
+
+<!-- js -->
+<script src="js/lib/jquery1.8.3.min.js"></script>
+<script>
+	window.onload=function(){
+         var smallBox=document.getElementById("smallBox");
+         var bigBox=document.getElementById("bigBox");
+         var floatBox=document.getElementById("floatBox");
+         var bigImg=bigBox.getElementsByTagName("img")[0];
+         smallBox.onmouseover=function(){
+             floatBox.style.display = "block";
+             bigBox.style.display = "block";
+         }
+         smallBox.onmouseout=function(){
+             floatBox.style.display = "none";
+             bigBox.style.display = "none";
+         }
+         smallBox.onmousemove=function(event){
+             var e=event||window.event;
+             var left= e.clientX-smallBox.offsetLeft-floatBox.offsetWidth/2;
+             var top = e.clientY-smallBox.offsetTop-floatBox.offsetHeight/2;
+             if (left < 0) {
+                 left = 0;
+             } else if (left > (smallBox.offsetWidth - floatBox.offsetWidth)) {
+                 left = smallBox.offsetWidth - floatBox.offsetWidth;
+             }
+
+             if (top < 0) {
+                 top = 0;
+             } else if (top > (smallBox.offsetHeight - floatBox.offsetHeight)) {
+                 top = smallBox.offsetHeight - floatBox.offsetHeight;
+             }
+             floatBox.style.left=left+"px";
+             floatBox.style.top=top+"px";
+             bigImg.style.left=-(left*bigBox.offsetWidth)/smallBox.offsetWidth+"px";
+             bigImg.style.top=-(top*bigBox.offsetHeight)/smallBox.offsetHeight+"px";
+
+
+         }
+     }
+</script>
+<!-- /js -->
+</body>
+</html>
