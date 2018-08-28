@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	    <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+	    
+	    <script>
+	    	//window.onload事件
+	    	/*
+	    	$(function(){
+	    		alert('jquery1');
+	    	})
+	    	
+	    	$(function(){
+	    		alert('jquery2');
+	    	})
+	    	*/
+	    	/*
+	    	alert($);
+	    	alert(jQuery);
+	    	alert($===jQuery);
+	    	jQuery(function(){
+	    		alert('jquery3');
+	    	})
+	    	*/
+	    	$(function(){
+	    		//$('#box').css('color',"red");
+	    		//dom操作方式
+	    		var box=document.getElementById('box'); //dom元素
+	    		alert(box);   //dom元素对象
+	    		box.style.color="blue";
+	    		alert(box.innerHTML);
+	    		alert(box.tagName);
+	    		
+	    		
+	    		//jquery操作
+	    		var box2=$('#box');
+	    		alert(box2+"****");
+	    		alert(box2.html());
+	    		box2.css('color','red');
+	    		
+	    		var box3=$(box);  //$()把dom对象转换成jquery对象
+	    		alert(box3.html()+"&&&&");
+	    		
+	    	})
+	    	
+	    	
+	    </script>
+	</head>
+	<body>
+		<div id="box">mydiv</div>
+	</body>
+</html>

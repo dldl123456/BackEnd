@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box1{
+				display: none;
+				width:200px;
+				height: 300px;
+				border:1px solid red;
+				background:green;
+			}
+		</style>
+		<title></title>
+		  <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+		  <script type="text/javascript">
+		  	   $(function(){
+		  	   	   /*
+		  	   	    $('.box').css('background','red');
+		  	   	    var allObject=$('*');  //对象数组（元素是DOM元素）
+		  	   	    alert(allObject.length);
+		  	   	    for(i=0;i<allObject.length;i++){
+		  	   	    	alert(allObject[i].tagName);
+		  	   	    }
+		  	   	    */
+		  	   	   // $('.box,span').css('background','red');
+		  	   	   
+		  	   	   //后代（子元素，孙子元素）
+		  	   	   //$('div span').css('background','red');
+		  	   	   //子元素
+		  	   	    // $('div>span').css('background','red');
+		  	   	    //紧跟着后面
+		  	   	     // $('div+span').css('background','red');
+		  	   	   //只要跟着DIV后面的所有SPAN元素  
+		  	   	  // $('div~span').css('background','red');
+		  	   	  
+		  	   	  //$('li:first').css('background','blue');
+		  	   	 // $('li:not(li:first)').css('background','blue');
+		  	   	 // $('li:even').css('background','red');
+		  	   	  
+		  	   	  //$('li:gt(1)').css('background','red');
+		  	   	  //$('span:contains("span")').css('background','red');
+		  	   	  
+		  	   	 // $('li:empty').html('sssss');
+		  	   	 //$('div:has(span)').css('background','green');
+		  	   	 
+		  	   	 //alert($('div:hidden').html());
+		  	   	// alert($('input:hidden').val());
+		  	   	 //alert($('input[type="text"]').val());
+		  	   	// alert($(':input').length);
+		  	   	 alert($($(':text')[0]).val());  //数组对象的元素是DOM元素
+		  	   	 
+		  	   });
+		  	
+		  </script>
+	</head>
+	<body>
+		<input type="hidden" value="9999" />
+		<input type="text" value="liayin" />
+		<ul>
+			<li></li>
+			<li>aaaa</li>
+			<li>bbbb</li>
+			<li>cccc</li>
+			<li>dddd</li>
+			
+		</ul>
+		<div class="box">mydiv</div>
+		<span>span1</span>
+		<div>
+			 <span>span2</span>
+			 <p>
+			 	 <span>span3</span>
+			 </p>
+		</div>
+		<span>span4</span>
+		<span>span5</span>
+		<div id="box1">box1..</div>
+	</body>
+</html>
