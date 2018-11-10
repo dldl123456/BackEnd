@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="entity">
+	<insert id="insertUser" parameterType="entity.User">
+		<!-- id自动生成字符串  -->
+		<!-- 把id查询出来绑定在id上，查询在前，先查询再绑定（绑定在对象的属性上） -->
+		<selectKey resultType="string" keyProperty="id" order="BEFORE">
+			select uuid();
+		</selectKey>
+		insert into tbs_user(id, username, password) values(#{id}, #{username}, #{password})
+	</insert>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="po">
+	<!-- 
+		#{id}表示使用preparedStatement设置占位符并将输入变量传到sql语句
+		resultType表示定义结果映射类型
+		parameterType表示要传的值或对象
+	 -->
+	<select id="selectUserById" parameterType="int" resultType="po.User">
+		select * from tb_user where id = #{user_id}
+	</select>
+	
+	<!-- 新增 (对象)  -->
+	<insert id="insertUser" parameterType="po.User">
+		insert into tb_user(username, password, age) values(#{username}, #{password}, #{age})
+	</insert>
+	
+	<!-- 修改   -->
+	<update id="updateUserById" parameterType="po.User">
+		update tb_user set username=#{username}, password=#{password}, age=#{age} where id=#{id}
+	</update>
+	
+	<!-- 删除  -->
+	<delete id="deleteUserById" parameterType="int">
+		delete from tb_user where id = #{id}
+	</delete>
+	
+	<!-- 如果传的值为字符串或数字，使用value，如果传对象，使用属性  -->
+	<select id="selectUserByUserName1" parameterType="string" resultType="po.User">
+		select * from tb_user where username like '%${value}%'
+	</select>
+	
+	<select id="selectUserByUserName" parameterType="po.User" resultType="po.User">
+		select * from tb_user where username like '%${username}%'
+	</select>
+</mapper>

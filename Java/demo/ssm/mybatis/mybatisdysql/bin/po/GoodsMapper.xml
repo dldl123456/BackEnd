@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.GoodsMapper">
+	<!-- sql片段，将重复的sql语句提取出来进行封装   -->
+	<sql id="mybacesql">
+		select id, goodsname, price, num from tb_goods
+	</sql>
+
+	<!-- 根据条件查询商品（动态sql-If）   -->
+	<!-- 传过来是一个对象所以parameterType=对象  -->
+	<!-- test=""是属性名  -->
+	<!-- 如果传过来的对象为空   -->
+	<!-- 1=1查所有(永真)  -->
+	<select id="queryGoodsByIf" parameterType="goods" resultType="goods">
+		select id, goodsname, price, num from tb_goods where 1=1
+		<if test="goodsName!=null and goodsName!=''">
+		    and goodsName like '%' #{goodsName} '%'
+		</if>
+		<!-- 在price大于0的结果集中查询price大于300的数据  -->
+		<if test="price>0">
+			and price > #{price}
+		</if>
+	</select>
+	
+	<!-- 根据条件查询商品（动态sql-Where） -->
+	<!-- 查询价格在300以上包含a的所有商品数据  -->
+	<select id="queryGoodsByWhere" parameterType="goods" resultType="goods">
+		<include refid="mybacesql"></include>
+		<!-- 用where可以不加and  -->
+		<where>
+			<if test="goodsName!=null and goodsName!=''">
+			    goodsName like '%' #{goodsName} '%'
+			</if>
+			<!-- 拼接上个语句，这里必须加and  -->
+			<if test="price>0">
+				and price > #{price}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 根据条件查询商品（动态sql-Choose） 多分支语句  -->
+	<!-- 相当于switch-case语句（当第一个条件满足，第二个条件不执行，当第一个条件不满足，第一个条件执行）  -->
+	<!-- 两个不能同时满足，所以后面的when的sql可以不加and -->
+	<select id="queryGoodsByChoose" parameterType="goods" resultType="goods">
+		<include refid="mybacesql"></include>
+		<where>
+			<choose>
+				<!-- 当条件不为空  -->
+				<when test="goodsName!=null and goodsName!=''">
+					goodsName like '%' #{goodsName} '%'
+				</when>
+				<when test="price>0">
+					price > #{price}
+				</when>
+				<!-- 如果以上条件都不满足（1=2永假）查出来为空   -->
+				<otherwise>
+					1=2
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+	
+	<!-- 根据条件查询商品（动态sql-Foreach）传一个数组进去  -->
+	<!-- parameterType="Object[]"或者不标，Object[]表示任意类型的数组  -->
+	<select id="queryGoodsByForeach" parameterType="Object[]" resultType="goods">
+		<include refid="mybacesql"></include>
+		<!-- sql只接收一个数组参数，这时sql解析参数的名称mybatis固定为array
+			 如果数组是通过一个pojo传递到sql，则参数名为pojo中的属性名
+			 或array!=''
+		-->
+		<if test="array.length>0">
+			where id in
+			<!-- 遍历数组  
+				index -> 数组下标
+				item -> 数组每个元素的名称
+				open -> 循环开始
+				close -> 循环结束
+				separator -> 中间分隔输出(分隔符)
+			-->
+			<foreach collection="array" item="goodId" open="(" close=")" separator=",">
+				#{goodId}
+			</foreach>
+		</if>
+	</select>
+	
+	<!-- 根据条件查询商品（动态sql-Foreach）传一个集合进去  -->
+	<!-- parameterType="Object[]"也可以用，或者不写  -->
+	<select id="queryGoodsByForeach2" resultType="goods">
+		<include refid="mybacesql"></include>
+		<if test="list.size()>0">
+			where id in
+			<!-- collection="list"  -->
+			<foreach collection="list" item="goodId" open="(" close=")" separator=",">
+				#{goodId}
+			</foreach>
+		</if>
+	</select>
+	
+	<!-- 根据条件查询商品（动态sql-Foreach）传一个集合对象进去  -->
+	<select id="queryGoodsByForeach3" resultType="goods">
+		<include refid="mybacesql"></include>
+		<if test="list.size()>0">
+			where id in
+			<foreach collection="list" item="goods" open="(" close=")" separator=",">
+				#{goods.id}
+			</foreach>
+		</if>
+	</select>
+</mapper>

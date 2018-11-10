@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.AnimalsMapper">
+	<!-- 根据id查询动物  -->
+	<!-- 
+		数据库字段名和类（po对象 ）属性名不一致的时候查不到数据，可以用别名解决
+		别名要和属性名一致
+	-->
+	<!-- <select id="getAnimalsById" parameterType="_int" resultType="animals">
+		select id, animal_name as name, a_age as age from tb_animals where id = #{id}
+	</select> -->
+	
+	<!-- 第二种方法（用ResultMap将查询的结果映射到po）
+		 type="animals"是指对象，因为在sqlmapconfig.xml里面已经配置了po包下的别名，
+		 所以这里可以用po包下的类作别名
+		 
+		 column列名	
+		 property属性
+		 把数据库中的列名和po对象中的属性名进行绑定
+	  -->
+	<resultMap type="animals" id="animalsMap">
+       <result column="animal_name" property="name"/>
+       <result column="a_age" property="age"/>
+   </resultMap>
+   
+	<!-- 结果集用resultMap的引用   -->
+	<select id="getAnimalsById" parameterType="int" resultMap="animalsMap">
+		select id,animal_name ,a_age  from tb_animals where id=#{id}
+	</select>
+</mapper>

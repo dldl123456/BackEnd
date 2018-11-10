@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.StudentDao">
+	<!-- 牵涉到多张表查询的结果集都用resultMap(返回的结果集必须自己封装) -->
+	<!-- type表示返回的类型，别名  -->
+	<resultMap type="student" id="studentMap">
+		<id column="sid" property="sid" />
+		<result column="sname" property="sname" />
+		
+		<!-- 集合的映射用   -->
+		<collection property="course" ofType="Course">
+			<id column="cid" property="cid" />
+			<result column="cname" property="cname" />
+		</collection>
+	</resultMap>
+	
+	<select id="getStudentById" parameterType="int" resultMap="studentMap">
+		select sid, sname, cid, cname 
+		from tb_student s, tb_middle m, tb_course c 
+		where s.sid = m.studentId and c.cid = m.courseId 
+		and s.sid = #{sid}
+	</select>
+</mapper>

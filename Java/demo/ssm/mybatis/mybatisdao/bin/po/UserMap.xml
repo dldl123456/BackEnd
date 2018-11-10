@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserMapper">
+	<!-- sqlmapconfig中别名已经配置，这里的别名默认配置下的包的类名，大小写都可以 -->
+	<insert id="insertUser" parameterType="User">
+		insert into tb_user(username, password, age) values(#{username}, #{password}, #{age})
+	</insert>
+	
+	<select id="getUserById" parameterType="int" resultType="user">
+		select * from tb_user where id = #{user_id}
+	</select>
+</mapper>

@@ -1,0 +1,23 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+	<!-- 缓存到磁盘位置   -->
+	<diskStore path="e:\ehcache" />
+	<!-- 默认缓存 
+		maxElementsInMemory 内存中缓存最大数目
+		maxElementsOnDisk 磁盘中缓存的最大数目（内存中超过就存在磁盘中）0表示无穷
+		eternal 设定是否永远不过期
+		timeToIdleSeconds  上面如果是false(会过期)设定，前后两次访问时间超过就好删除，0表示无穷
+		timeToLiveSeconds  生命周期，默认0，无穷
+		diskExpiryThreadIntervalSeconds  磁盘缓存清理线程运行间隔，默认120秒。
+	-->
+	<defaultCache
+		maxElementsInMemory="1000" 
+		maxElementsOnDisk="10000000"
+		eternal="false" 
+		overflowToDisk="false" 
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120" 
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+	</defaultCache>
+</ehcache>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.GoodsMapper">
+	<!-- 接口方法名和id名一致  -->
+	<!-- 添加商品(传一个对象)  -->
+	<insert id="addGoods" parameterType="Goods">
+		insert into tb_goods(goodsname, price, num) values(#{goodsName}, #{price}, #{num})
+	</insert>
+	
+	<!-- 根据id查询商品(传一个整型<_int别名>)，
+		返回一个对象，sqlmapconfig中设置了别名配置，
+		故该包下的类名可当做别名
+		（返回值是对象） 
+	 -->
+	<select id="queryGoodsById" parameterType="_int" resultType="goods">
+		select id, goodsname, price, num from tb_goods where id = #{id}
+	</select>
+	
+	<!-- 根据名称查询商品  -->
+	<select id="queryGoodsByName" parameterType="string" resultType="goods">
+		select id, goodsname, price, num from tb_goods where goodsname like '%${value}%'
+	</select>
+	
+	<!-- 根据商品条件搜索（价格区间） -->
+	<!-- 传一个条件（对象），返回goods集合  -->
+	<select id="queryGoodsCondition" parameterType="GoodsCondition" resultType="goods">
+		select id, goodsname, price, num from tb_goods where price between #{minPrice} and #{maxPrice}
+	</select>
+	
+	<!-- 根据商品名称和id查询商品  -->
+	<!-- 
+		传2个参数，不写parameterType
+		传map集合
+		map[key 0,1....param1,param2]
+	 -->
+	<!-- <select id="queryGoodsByNameAndId" resultType="goods">
+		select id, goodsname, price, num from tb_goods where goodsname=#{param1} and id=#{param2}
+	</select> -->
+	<!-- 第二种方法，用注解  
+		用dao中配置的注解的名字
+	-->
+	<select id="queryGoodsByNameAndId" resultType="goods">
+		select id, goodsname, price, num from tb_goods where goodsname=#{goodsName} and id=#{id}
+	</select>
+	
+	<!-- 根据id和对象查询商品  -->
+	<select id="queryGoodsByIdAndGoods" resultType="goods">
+		select id, goodsname, price, num from tb_goods where id=#{param1} and goodsName=#{gds.goodsName}
+	</select>
+	
+	<!-- 根据map集合查询商品   -->
+	<!-- 
+		id=#{id}里的id指新建的map集合中的键名
+	 -->
+	<select id="queryGoodsByMap" parameterType="hashmap" resultType="goods">
+		select id, goodsname, price, num from tb_goods where id=#{id} and goodsName=#{goodsName}
+	</select>
+	
+	<!-- 根据id和集合查询商品   -->
+	<select id="queryGoodsByIdAndList" resultType="goods">
+		select id, goodsname, price, num from tb_goods where id=#{param1} and goodsName=#{gdslist[0].goodsName}
+	</select>
+</mapper>

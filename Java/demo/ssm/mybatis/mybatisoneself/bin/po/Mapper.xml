@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.NewsDao">
+	<!-- 根据父节点id查子节点数据(分布查询)  -->
+	<!-- <resultMap type="News" id="newsMapper">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		
+		news对象中的children属性 
+		<collection property="children" ofType="News" select="getChildrenById" column="id" />
+
+	</resultMap>
+	
+	先通过pid查id，再把id传到下一个select，通过id查id 
+	<select id="getChildrenByPid" parameterType="int" resultMap="newsMapper">
+		select id, name from tb_news where pid = #{pid};
+	</select>
+	
+	<select id="getChildrenById" parameterType="int" resultMap="newsMapper">
+		select id, name from tb_news where pid = #{id};
+	</select> -->
+	
+	<!-- 递归查询  -->
+	<resultMap type="News" id="newsMapper">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		
+		<collection property="children" ofType="News" select="getChildrenByPid" column="id" />
+	</resultMap>
+	
+	<select id="getChildrenByPid" parameterType="int" resultMap="newsMapper">
+		select id, name from tb_news where pid = #{pid};
+	</select>
+</mapper>

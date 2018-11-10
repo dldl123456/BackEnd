@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CardDao">
+	<!-- 根据用户id查身份证  -->
+	<!-- 需要多少列就写多少结果集  -->
+	<resultMap type="CardNo" id="CardNoMapper">
+		<id column="cid" property="cid" />
+		<result column="cardNo" property="cardNo" />
+		
+		<!-- 卡对象中有人对象（property人属性，ofType人对象）  -->
+		<association property="person" javaType="Person">
+			<id column="pid" property="pid" />
+			<result column="pname" property="pname" />
+		</association>
+	</resultMap>
+	
+	<select id="getPersonById" parameterType="int" resultMap="CardNoMapper">
+		select * from 
+		tb_person p, tb_card c
+		where p.pid = c.personId 
+		and p.pid = #{pid}
+	</select>
+</mapper>

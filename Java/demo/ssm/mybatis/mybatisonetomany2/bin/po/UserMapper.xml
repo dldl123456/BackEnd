@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.GroupDao">
+	<!-- 根据组id查找用户信息 -->  
+	<!-- 分布查询 
+		select gid, gname from group_tb where gid = #{gid}
+		select uid, uname from user_tb where groupId = gid
+	-->
+	<resultMap type="Group" id="groupMapper">
+		<!-- 主键用id -->
+		<id column="gid" property="gid" />
+		<!-- 普通列用result -->
+		<result column="gname" property="gname" />
+		
+		<!-- 改collection -->
+		<collection property="users" ofType="User" select="getUserByGroupId" column="gid" />
+			
+	</resultMap>
+	
+	<!-- 查group  -->
+	<!-- getGroupById和groupMapper关联，查出gid -->
+	<select id="getGroupById" parameterType="int" resultMap="groupMapper">
+		select gid, gname from group_tb where gid = #{gid}
+	</select>
+	
+	<!-- 查用户的groupId -->
+	<!-- getUserByGroupId和collection关联，拿到gid，并返回User结果集  -->
+	<select id="getUserByGroupId" resultType="User">
+		select uid, uname from user_tb where groupId = #{gid}
+	</select>
+</mapper>

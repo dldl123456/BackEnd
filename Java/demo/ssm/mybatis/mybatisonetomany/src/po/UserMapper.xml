@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.GroupDao">
+	<!-- 根据组id查找用户信息 -->  
+	<!-- 多表查询不能用resultType,要用resultMap -->
+	<!-- 组装一个返回的结果集 -->
+	<!-- 
+		resultMap中存在很多的子元素
+		“constructor”:类在实例化时，用来注入结果到构造方法中。
+		“idArg”：ID参数，标记结果作为ID，可以帮助提高整体的效率。
+		“arg”：注入到构造方法的一个不同结果。
+		“id”：这个id，类似于数据库的主键，能够帮助提高整体的效率
+		“result”：即结果字段，其中包括java对象的属性值，和数据库列名
+		“association”：复杂类型的结果关联，结果映射能够关联自身，或者关联另一个结果集
+		“collection”：复杂类型的集合，结果映射自身，或者映射结果集
+		“discriminator”：使用结果值来决定使用哪个结果映射
+		“case”：基于某些值的结果映射。嵌入结果映射，这种情形也映射到它本身，因此，能够包含相同的元素，或者参照一个外部的结果映射。
+		对于resultMap标签，上文的基础用法中我们已经介绍了他的属性含义。但，在此之外，还有一个属性值为：
+		“autoMapping”：如果出现此配置，Mybatis将会启用或者禁用自动匹配resultMap的功能，这个属性将会在全局范围内覆盖自动匹配机制。默认情况下是没有这个配置的，因此，如果需要，请保持慎重。
+	 -->
+	<resultMap type="Group" id="groupMapper">
+		<!-- 主键用id -->
+		<id column="gid" property="gid" />
+		<!-- 普通列用result -->
+		<result column="gname" property="gname" />
+		
+		<!-- group对象中的user属性   -->
+		<collection property="users" ofType="User">
+			<id column="uid" property="uid" />
+			<result column="uname" property="uname" />
+		</collection>
+	</resultMap>
+	
+	<select id="getGroupById" parameterType="int" resultMap="groupMapper">
+		select gid, gname, uid, uname from 
+		group_tb g, user_tb u
+		where g.gid = u.groupId 
+		and g.gid = #{gid}
+	</select>
+</mapper>
