@@ -8,6 +8,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 		先制定工厂
 		静态工厂方法名
 	-->
-	<bean id="hw" class="bean.Factory" factory-method="getHelloWorldIntance"></bean>
+	<bean id="hw" class="bean.Factory" factory-method="getHelloIntance"></bean>
 	
 </beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- id="fy"===》id和name都可以（id是唯一的，必须以字母开始）
+		可以使用字母，数字，连字符，下划线，句号，冒号 
+		name没有要求
+		现在都用id
+	-->
+	<!-- 先实例化自己，再实例化引用 -->
+	<bean id="fy" class="bean.Factory"></bean>
+	<!-- 上面已经实例化之后引用   -->
+	<bean id="hw" factory-bean="fy" factory-method="getHelloIntance"></bean>
+	
+</beans>

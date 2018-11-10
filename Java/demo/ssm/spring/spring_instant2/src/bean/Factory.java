@@ -8,7 +8,7 @@ package bean;
 
 public class Factory {
 	//实例化hello
-	public static Hello getHelloWorldIntance(){
+	public static Hello getHelloIntance(){
 		System.out.println("静态方法");
 		return new Hello();
 	}
