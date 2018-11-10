@@ -5,7 +5,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import bean.Hello;
 
-public class TestBean1 {
+public class TestBean {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ApplicationContext context = new FileSystemXmlApplicationContext("src/beans.xml");
