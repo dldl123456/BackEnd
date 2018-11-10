@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 实例化，默认是无参的构造方法,有参构造方法要进行配置   -->
+	<bean id="hw0" class="bean.Hello"></bean>
+	
+	<!-- 带参构造方法 (通过构造方法把对象实例化) -->
+	<!-- 构造方法的类型是一个字符串   
+		public Hello(String name) {
+			super();
+			this.name = name;
+		}
+		所以要制定一个类型，并传一个值进去
+		根据参数的类型
+	-->
+	<!-- <bean id="hw" class="bean.Hello">
+		<constructor-arg type="java.lang.String" value="dsd"></constructor-arg>
+	</bean> -->
+	
+	<!-- 带参构造方法第二种写法  -->
+	<bean id="hw" class="bean.Hello">
+		<!-- index参数索引，构造方法参数的个数编号 
+		
+		-->
+		<constructor-arg index="0" value="dsd"></constructor-arg>
+	</bean>
+</beans>

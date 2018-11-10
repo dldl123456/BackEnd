@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 这里的beans表示可以创建很多个业务对象  -->
+
+<!-- 有时候配置文件没有提示,说明配置文件没有找到，需要手动添加
+	window->perferences->输入xml,找到XML Catalog
+	将http://www.springframework.org/schema/beans/spring-beans.xsd
+	赋值到key,上面的keytype保持不变，
+	然后点击filesysystem在下载的spring_framework中找到schema文件
+	找到beans\spring-beans.xsd
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- spring实例化（一个bean就是一个业务对象）容器创建对象(实例化对象)
+		spring会创建一个对象，id叫hw
+	-->
+	<bean id="hw" class="bean.Hello"></bean>
+	
+	<bean id="hw1" class="bean.Hello"></bean>
+
+</beans>
