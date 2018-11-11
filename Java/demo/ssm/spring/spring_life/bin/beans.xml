@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 生命周期（从初始化到销毁）
+		init-method  初始化方法
+		destroy-method  销毁方法
+		
+		单例的话，只有一个对象，
+		多例的话，每次创建都是一个新的对象，不存在销毁，
+		销毁只针对单例
+	-->
+	<bean id="hw" class="bean.Hello" init-method="init" destroy-method="destroy">
+		<constructor-arg index="0" value="dsd"></constructor-arg>
+	</bean>
+</beans>

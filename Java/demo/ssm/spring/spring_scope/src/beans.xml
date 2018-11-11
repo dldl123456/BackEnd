@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 作用域scope，默认是单例(sington) 
+		prototype 表示多例(每次容器实例化一个新的对象)
+	-->
+	<bean id="hw" class="bean.Hello" scope="prototype">
+		<constructor-arg index="0" value="dsd"></constructor-arg>
+	</bean>
+</beans>
