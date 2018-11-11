@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 通过bean访问bean1 
+		先实例化bean1
+	-->
+	<bean id="b1" class="bean.Bean1">
+		<!-- set注入  -->
+      <property name="name" value="xiaobai"></property>
+    </bean>
+    
+    <bean id="bean" class="bean.Bean">
+		<!-- 
+			b1已经被实例化，实例化bean，
+			bean里面有bean1属性，所以要引用bean里面
+			的bean1属性，即上面实例化过的bean1对象  
+			
+			bean1引用对象
+			
+			可以解耦，
+			如果Bean属性变了，下面都要改变，维护困难，
+			用spring容器不改变
+			
+			引用对象用ref
+		-->
+      <property name="bean1" ref="b1"></property>
+    </bean>
+	
+</beans>

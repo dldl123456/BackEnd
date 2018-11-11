@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- TestCollections对象  -->
+	<bean id="cs" class="bean.TestCollections">
+		<!-- 空注入  -->
+		<!-- id属性  -->
+		<property name="id" value=""></property>
+		<!-- 或者  -->
+		<!-- <property name="id">
+			<null></null>
+		</property> -->
+      
+		<!-- 注入数组  -->
+		<property name="array">
+			<array>
+				<!-- 数组值内容  -->
+				<value>aaa</value>
+				<value>ggg</value>
+			</array>
+		</property>
+		
+		<!-- 注入list集合(对象的list集合属性名)  -->
+		<property name="listValues">
+			<list>
+				<value>33</value>
+				<value>yy</value>
+			</list>
+		</property>
+    
+    	<!-- 注入set集合(对象的set集合属性名)  -->
+		<property name="setValues">
+			<set>
+				<value>gga</value>
+				<value>nn</value>
+			</set>
+		</property>
+		
+		<!-- 注入map集合(对象的map集合属性名)键值对  -->
+		<property name="mapValues">
+			<map>
+				<!-- key是对象的话，用ref，普通值用value，有几个键就有几个entry  -->
+				<entry key="a" value="aaa" />
+				<entry key="f" value="fff" />
+			</map>
+		</property>
+		
+		<!-- 注入属性文件(对象的属性文件属性名) 也是键值对  -->
+		<property name="propValues">
+			<props>
+				<!-- 没有value属性，直接写值  -->
+				<prop key="1">111</prop>
+				<prop key="2">ff</prop>
+				<prop key="3">vv</prop>
+			</props>
+		</property>
+    </bean>
+    
+</beans>
