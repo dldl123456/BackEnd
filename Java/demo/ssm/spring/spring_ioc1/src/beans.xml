@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="hw" class="bean.Factory" factory-method="getHelloIntance">
+		<!-- 
+			设值注入(通过set方法)set注入==》底层都是反射
+			属性   
+			name是property的属性名，name是对象的属性的属性名
+		-->
+		<property name="name" value="gyu"></property>
+	</bean>
+	
+</beans>
