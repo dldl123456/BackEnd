@@ -19,5 +19,11 @@ public class TestBean {
 		
 		//通过bean访问bean1的属性
 		System.out.println(bean.getBean1().getName());
+		
+		//加载b1对象
+		Bean b1 = (Bean) context.getBean("b1");
+		System.out.println(b1.getId() + b1.getName());
+		System.out.println(b1.getBean1().getName());
+		
 	}
 }

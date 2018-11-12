@@ -18,6 +18,10 @@
 		
 		bean有bean1属性，所以是p:bean1,
 		通过bean访问bean1要引用，所以要加ref，引用bean1
+		
+		外部bean能否引用innerBean => p:bean1-ref="innerBean"?
+		找不到
+		内部bean不能被外部bean引用
 	-->
 	<bean id="bean" class="bean.Bean" 
 		p:id="222" p:name="植酸钠" p:bean1-ref="bean1" />
@@ -28,5 +32,19 @@
 	<bean id="bean1" class="bean.Bean1">
 		<property name="name" value="绿环"></property>
 	</bean>
+	
+	
+	<!-- 内部bean(注入对象属性) -->
+	<bean id="b1" class="bean.Bean">
+		<!-- 注入属性  -->
+		<property name="id" value="666"></property>
+		<property name="name" value="fdsa"></property>
+		<property name="bean1">
+			<bean class="bean.Bean1" id="innerBean">
+				<property name="name" value="neibuname"></property>
+			</bean>
+		</property>
+	</bean>
 		
+	
 </beans>
