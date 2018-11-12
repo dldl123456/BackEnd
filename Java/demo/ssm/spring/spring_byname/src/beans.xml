@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+		在beans里面加default-autowire="byName"是全局装配，
+		下面就可以不写autowire="byName"   
+	-->
+
+	<!-- spring装配（优化配置）  
+		byName/byType
+		byName装配：对象的属性名与实例化的名称要一致
+	-->
+	<!-- 未简化  -->
+	<!-- <bean id="b1" class="bean.Bean1">
+		<property name="name" value="xiaohua"></property>
+	</bean>
+	<bean id="b2" class="bean.Bean2"></bean>
+	<bean id="bean" class="bean.Bean">
+		属性bean1引用上b1 
+		<property name="bean1" ref="b1"></property>
+		<property name="bean2" ref="b2"></property>
+	</bean> -->
+	
+	<!-- 简化  （byName）
+		autowire:自动装配
+		id是实例化的名字（实例化名和属性名要一致）
+		局部装配
+	-->
+	<!-- <bean id="bean1" class="bean.Bean1"></bean>
+	<bean id="bean2" class="bean.Bean2"></bean>
+	<bean id="bean" class="bean.Bean" autowire="byName"></bean> -->
+	
+	<!-- 简化  （byType） 
+		对象的属性名的类型（bean1的属性名的类型是Bean）
+		与bean的Class名（Bean1）一致
+	-->
+	<bean id="b1" class="bean.Bean1"></bean>
+	<bean id="b2" class="bean.Bean2"></bean>
+	<bean id="bean" class="bean.Bean" autowire="byType"></bean>
+</beans>

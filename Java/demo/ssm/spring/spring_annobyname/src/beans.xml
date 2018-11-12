@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- 原来的配置  -->
+	<!-- <bean id="userDaoImpl" class="com.demo.dao.UserDaoImpl"></bean> -->
+	
+	<!-- 用注解（找到类里面的注解实例化的对象，扫描）  -->
+	<!-- 扫描器（文档context schema）
+		加入xmlns:context="http://www.springframework.org/schema/context"
+		http://www.springframework.org/schema/beans/spring-beans.xsd"
+		提示就出来了
+	-->
+	<!-- 扫描@Component注解  
+		扫描包下有@Component注解的自动实例化
+	-->
+	<context:component-scan base-package="com.demo"></context:component-scan>
+</beans>
