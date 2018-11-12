@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 
+	命名空间的注入
+	在beans里面加入schema(xmlns:xsi下面)
+		xmlns:p="http://www.springframework.org/schema/p"
+-->
+
+	<!-- 命名空间名(bean的id,name属性)  
+		p:属性 => 是一种格式（p命名空间）
+		注入属性
+		
+		c命名空间一样
+		
+		bean有bean1属性，所以是p:bean1,
+		通过bean访问bean1要引用，所以要加ref，引用bean1
+	-->
+	<bean id="bean" class="bean.Bean" 
+		p:id="222" p:name="植酸钠" p:bean1-ref="bean1" />
+		
+	<!-- 注入bean1先实例化bean  
+		通过bean访问bean1
+	-->
+	<bean id="bean1" class="bean.Bean1">
+		<property name="name" value="绿环"></property>
+	</bean>
+		
+</beans>
