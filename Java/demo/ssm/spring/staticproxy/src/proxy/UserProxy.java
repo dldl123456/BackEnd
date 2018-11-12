@@ -22,7 +22,7 @@ public class UserProxy implements UserDao {
 	@Override
 	public void addUser(User user) {
 		//如果每个方法前都加，维护麻烦
-		check();  
+		check();  //横向的动态插入代码块
 		System.out.println("add User...");
 		userDaoImpl.addUser(user);
 		printLog();
@@ -36,13 +36,12 @@ public class UserProxy implements UserDao {
 		printLog();
 	}
 	
-	//纵向切入
+	//切片代码（横向的动态插入代码块）
 	//打印日志
 	public void printLog(){
 		System.out.println("打印日志");
 	}
 	
-	//横向切入
 	//检察权限
 	public void check(){
 		System.out.println("检查权限");
