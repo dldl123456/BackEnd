@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 实例化userDao的实现   -->
+	<bean id="userDaoImpl" class="dao.UserDaoImpl"></bean>
+	
+	<!-- 实例化切片  -->
+	<bean id="proxyObject" class="proxy.UserProxy"></bean>
+	
+	<!-- 配一个AOP切面（文档中找AOP配置[搜schema/a]） 
+		加入配置
+			xmlns:aop="http://www.springframework.org/schema/aop"
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/
+aop/spring-aop.xsd
+	 -->
+	 <aop:config>
+	 	<!-- 这里的代理对象，是一个切面 
+	 		这个切面是类，可以引用
+	 	-->
+	 	<aop:aspect id="proxyObjectAspect" ref="proxyObject">
+	 		<!-- 配置一个切入点   
+	 			第一个*表示返回类型，*表示所有类型
+	 			包名，需要拦截的包名，后面两点表示当前包和当前包的所有子包
+	 			第二个*表示类名，*表示所有类
+	 			最后这个*号表示方法名，*表示所有方法，
+	 			后面括号表示方法的参数，两点表示任何参数
+	 			
+	 			方法就限定死了
+	 			execution(* dao..*.addUser(..))
+	 		-->
+	 		<aop:pointcut expression="execution(* dao..*.*(..))" id="userPointcut" />
+	 		<!-- 配一个通知（在之前通知）切入点的引用[找到pointcut的位置]
+	 			after也可以
+	 		-->
+	 		<aop:before method="check" pointcut-ref="userPointcut" />
+	 	</aop:aspect>
+	 </aop:config>
+</beans>

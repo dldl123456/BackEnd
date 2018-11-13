@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 使用接口配置通知  -->
+	
+	<!-- 注入目标对象  -->
+	<bean id="userDaoImpl" class="dao.UserDaoImpl"></bean>
+	
+	<!-- 注入切面通知  -->
+	<bean id="myAdvice" class="advice.MyMethodBeforeAdvice"></bean>
+	
+	<!-- 生成代理对象(spring底层集成的动态代理)  -->
+	<bean id="userProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+       <property name="target" ref="userDaoImpl"></property>
+       <property name="interceptorNames" value="myAdvice"></property>
+    </bean>
+	
+</beans>
