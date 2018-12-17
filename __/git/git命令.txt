@@ -1,0 +1,2 @@
+git push²»ÊäÈëÃÜÂë
+git config --global credential.helper store
